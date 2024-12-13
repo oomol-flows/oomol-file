@@ -1,0 +1,48 @@
+inputs_def:
+  - handle: url
+    description: Input
+    json_schema:
+      type: string
+      pattern: https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)
+  - handle: query
+    json_schema:
+      type: object
+      additionalProperties:
+        type: string
+    value:
+      {}
+    nullable: false
+  - handle: headers
+    json_schema:
+      type: object
+      additionalProperties:
+        type: string
+    value:
+      {}
+    nullable: false
+  - handle: timeout
+    json_schema:
+      type: integer
+      minimum: 0
+    value: 0
+    nullable: false
+  - handle: retry_times
+    json_schema:
+      type: integer
+      minimum: 1
+    value: 1
+    nullable: false
+outputs_def:
+  - handle: binary
+    description: Output
+    json_schema:
+      contentMediaType: oomol/bin
+ui:
+  default_width: 450
+executor:
+  name: python
+  options:
+    spawn: false
+    entry: main.py
+title: Read URL
+icon: ":fa6-solid:cloud-arrow-down:"
