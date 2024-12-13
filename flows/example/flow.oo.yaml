@@ -24,3 +24,10 @@ nodes:
       - handle: file
         value: /oomol-driver/oomol-storage/srt/LangChain Quick Start Guide with
           OOMOL.srt
+  - task: self::read-folder
+    title: "Read folder #5"
+    node_id: read-folder#5
+    inputs_from:
+      - handle: folder
+      - handle: only_file_name
+        value: false

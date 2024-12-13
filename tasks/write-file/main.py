@@ -2,11 +2,10 @@ import os
 import re
 
 from typing import Literal
-from oocana import Context, Literal
 
 WhenFileExists = Literal["override", "ignore", "rename", "error"]
 
-def main(inputs: dict, context: Context):
+def main(inputs: dict):
   binary: bytes = inputs["binary"]
   file_name: str = inputs["file_name"]
   output_folder: str = inputs["output_folder"]
@@ -41,8 +40,8 @@ def _rename_file(file_name: str, folder_path: str) -> str:
   max_index = 0
   print(ext_name, single_file_name, prefix)
 
-  for file in os.scandir(folder_path):
-    sub_name = os.path.splitext(file.name)[0]
+  for file in os.listdir(folder_path):
+    sub_name = os.path.splitext(file)[0]
     if sub_name.startswith(prefix):
       suffix = sub_name[len(prefix):]
       index = 0
