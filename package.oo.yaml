@@ -4,6 +4,11 @@ scripts:
   # eg: bootstrap: pip install pandas
   bootstrap: |
     pnpm install && pip install -r requirements.txt
-icon: "file:///Users/taozeyu/codes/github.com/oomol-flows/File/icon.png"
+icon: "./icon.png"
 dependencies:
   {}
+name: oomol-file
+displayName: File
+description: Related to operation files.
+releaseType: package
+releaseNotes: this is the first version
