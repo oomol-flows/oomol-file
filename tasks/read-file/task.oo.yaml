@@ -1,0 +1,20 @@
+inputs_def:
+  - handle: file
+    description: Input
+    json_schema:
+      type: string
+      ui:widget: file
+outputs_def:
+  - handle: binary
+    description: Output
+    json_schema:
+      contentMediaType: oomol/bin
+ui:
+  default_width: 450
+executor:
+  name: python
+  options:
+    spawn: false
+    entry: main.py
+title: Read file
+icon: ":fa6-solid:file-export:"

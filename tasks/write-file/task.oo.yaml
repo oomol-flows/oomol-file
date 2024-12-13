@@ -1,0 +1,44 @@
+inputs_def:
+  - handle: binary
+    description: Input
+    json_schema:
+      contentMediaType: oomol/bin
+  - handle: file_name
+    json_schema:
+      type: string
+  - handle: output_folder
+    json_schema:
+      type: string
+      ui:widget: dir
+  - handle: mkdir
+    json_schema:
+      type: boolean
+    value: false
+  - handle: when_file_exists
+    json_schema:
+      enum:
+        - override
+        - ignore
+        - rename
+        - error
+      ui:options:
+        labels:
+          - Override
+          - Ignore
+          - Rename
+          - Error
+    value: error
+outputs_def:
+  - handle: file_path
+    json_schema:
+      type: string
+      ui:widget: file
+ui:
+  default_width: 450
+executor:
+  name: python
+  options:
+    entry: main.py
+    spawn: false
+title: Write file
+icon: ":fa6-solid:file-import:"
