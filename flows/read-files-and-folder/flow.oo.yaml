@@ -1,0 +1,15 @@
+nodes:
+  - task: self::read-file
+    title: "Read file #1"
+    node_id: read-file#1
+    inputs_from:
+      - handle: file
+        value: /app/workspace/demo/read/Demo.md
+  - task: self::read-folder
+    title: "Read folder #1"
+    node_id: read-folder#1
+    inputs_from:
+      - handle: folder
+        value: /app/workspace/demo/read
+      - handle: only_file_name
+        value: true

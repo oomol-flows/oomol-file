@@ -1,0 +1,22 @@
+{
+  "nodes": {
+    "read-file#1": {
+      "contentWidth": 420,
+      "rfNode": {
+        "position": {
+          "x": 195,
+          "y": 104
+        }
+      }
+    },
+    "read-folder#1": {
+      "contentWidth": 420,
+      "rfNode": {
+        "position": {
+          "x": 195,
+          "y": 361
+        }
+      }
+    }
+  }
+}
