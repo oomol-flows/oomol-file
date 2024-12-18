@@ -1,0 +1,23 @@
+nodes:
+  - task: self::read-file
+    title: "Read file #1"
+    node_id: read-file#1
+    inputs_from:
+      - handle: file
+        value: /app/workspace/demo/read/Demo.md
+  - task: self::write-file
+    title: "Write file #1"
+    node_id: write-file#1
+    inputs_from:
+      - handle: binary
+        from_node:
+          - node_id: read-file#1
+            output_handle: binary
+      - handle: file_name
+        value: copy-target.md
+      - handle: output_folder
+        value: /app/workspace/demo/write
+      - handle: mkdir
+        value: true
+      - handle: when_file_exists
+        value: rename
