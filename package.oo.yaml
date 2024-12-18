@@ -10,5 +10,4 @@ dependencies:
 name: oomol-file
 displayName: File
 description: Related to operation files.
-releaseType: package
 releaseNotes: this is the first version

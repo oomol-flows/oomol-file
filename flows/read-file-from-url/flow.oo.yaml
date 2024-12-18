@@ -1,0 +1,20 @@
+nodes:
+  - task: self::read-url
+    title: "Read URL #1"
+    node_id: read-url#1
+    inputs_from:
+      - handle: url
+        value: https://oomol.com/
+      - handle: query
+        value:
+          {}
+      - handle: headers
+        value:
+          {}
+      - handle: timeout
+        value: 0
+      - handle: retry_times
+        value: 1
+    description: |-
+      Read HTML file from URL. 
+      Then you can see the downloaded binary data in log panel.

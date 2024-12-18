@@ -1,0 +1,22 @@
+{
+  "nodes": {
+    "read-url#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 270,
+          "y": 176
+        }
+      }
+    },
+    "write-file#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 791,
+          "y": 176
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+nodes:
+  - task: self::read-url
+    title: "Read URL #1"
+    node_id: read-url#1
+    inputs_from:
+      - handle: url
+        value: https://oomol.com/
+      - handle: query
+        value:
+          {}
+      - handle: headers
+        value:
+          {}
+      - handle: timeout
+        value: 0
+      - handle: retry_times
+        value: 1
+    description: Download HTML file from URL as binary
+  - task: self::write-file
+    title: "Write file #1"
+    node_id: write-file#1
+    inputs_from:
+      - handle: binary
+        from_node:
+          - node_id: read-url#1
+            output_handle: binary
+      - handle: file_name
+        value: oomol-home-page.html
+      - handle: output_folder
+        value: /app/workspace/demo/write
+      - handle: mkdir
+        value: true
+      - handle: when_file_exists
+        value: rename
+    description: Save the binary data as target file
