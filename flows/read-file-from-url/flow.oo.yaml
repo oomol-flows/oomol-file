@@ -15,3 +15,6 @@ nodes:
         value: 0
       - handle: retry_times
         value: 1
+    description: |-
+      Read HTML file from URL. 
+      Then you can see the downloaded binary data in log panel.

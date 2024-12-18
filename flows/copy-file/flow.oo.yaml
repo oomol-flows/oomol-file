@@ -5,6 +5,7 @@ nodes:
     inputs_from:
       - handle: file
         value: /app/workspace/demo/read/Demo.md
+    description: Read origin file as binary
   - task: self::write-file
     title: "Write file #1"
     node_id: write-file#1
@@ -21,3 +22,4 @@ nodes:
         value: true
       - handle: when_file_exists
         value: rename
+    description: Save the binary data as target file

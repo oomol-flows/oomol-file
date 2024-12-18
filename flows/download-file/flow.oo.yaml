@@ -15,6 +15,7 @@ nodes:
         value: 0
       - handle: retry_times
         value: 1
+    description: Download HTML file from URL as binary
   - task: self::write-file
     title: "Write file #1"
     node_id: write-file#1
@@ -31,3 +32,4 @@ nodes:
         value: true
       - handle: when_file_exists
         value: rename
+    description: Save the binary data as target file
