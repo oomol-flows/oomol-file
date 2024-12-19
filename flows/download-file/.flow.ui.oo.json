@@ -17,6 +17,14 @@
           "y": 176
         }
       }
+    },
+    "write-temp-file#1": {
+      "rfNode": {
+        "position": {
+          "x": 791,
+          "y": 564
+        }
+      }
     }
   }
 }
