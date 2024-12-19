@@ -28,7 +28,7 @@ When a request is made, the content in `headers` field will be inserted into the
 
 ## Write file
 
-Save the binary data passed to the `binary` field by another block as file content.
+Saves the binary data passed to `binary` by another block to the file whose path is returned in `file_path`.
 
 The `file_name` field indicates the file name to be saved.
 
@@ -45,3 +45,7 @@ The `when_file_exists` field indicates what action should be taken when the file
 - `Rename`: Save as a new file name to avoid overwriting any file (the new file name is created by adding a numeric suffix to the name represented by the `file_name` field).
 
 - `Error`: Report an error.
+
+## Write temp file
+
+Saves the binary data passed to `binary` by another block to a temporary file, the file path of which is returned in `file_path`.
