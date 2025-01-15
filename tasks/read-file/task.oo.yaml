@@ -14,7 +14,7 @@ ui:
 executor:
   name: python
   options:
+    entry: __init__.py
     spawn: false
-    entry: main.py
 title: Read file
 icon: ":fa6-solid:file-export:"

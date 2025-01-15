@@ -14,8 +14,12 @@ nodes:
     inputs_from:
       - handle: folder
         value: /app/workspace/demo/read
-      - handle: only_file_name
+      - handle: absolute_path
         value: true
+      - handle: sort
+        value: false
+      - handle: traverse
+        value: false
     description: |-
       Read names of file in local folder.
       Then you can see the name list in log panel.
