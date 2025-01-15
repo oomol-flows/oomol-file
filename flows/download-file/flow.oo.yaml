@@ -33,7 +33,7 @@ nodes:
       - handle: when_file_exists
         value: rename
     description: Save the binary data as target file
-  - task: self::write-temp-file
+  - task: self::write-file-to-path
     title: "Write temp file #1"
     node_id: write-temp-file#1
     inputs_from:
@@ -41,4 +41,8 @@ nodes:
         from_node:
           - node_id: read-url#1
             output_handle: binary
+      - handle: suffix
+        value:
+      - handle: file_path
+        value:
     description: Save the binary data as temp file

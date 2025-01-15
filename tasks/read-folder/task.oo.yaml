@@ -8,7 +8,7 @@ inputs_def:
     json_schema:
       type: boolean
     nullable: false
-    value: true
+    value: false
   - handle: traverse
     json_schema:
       type: boolean

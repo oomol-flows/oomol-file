@@ -19,7 +19,7 @@ nodes:
       - handle: sort
         value: false
       - handle: traverse
-        value: true
+        value: false
     description: |-
       Read names of file in local folder.
       Then you can see the name list in log panel.
