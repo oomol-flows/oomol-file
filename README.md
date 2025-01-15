@@ -46,6 +46,6 @@ The `when_file_exists` field indicates what action should be taken when the file
 
 - `Error`: Report an error.
 
-## Write temp file
+## Write file (to path)
 
 Saves the binary data passed to `binary` by another block to a temporary file, the file path of which is returned in `file_path`.
