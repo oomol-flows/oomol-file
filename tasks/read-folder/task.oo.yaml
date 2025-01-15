@@ -4,10 +4,19 @@ inputs_def:
     json_schema:
       type: string
       ui:widget: dir
-  - handle: only_file_name
+  - handle: sort
+    json_schema:
+      type: boolean
+    nullable: false
+    value: true
+  - handle: traverse
     json_schema:
       type: boolean
     value: false
+  - handle: absolute_path
+    json_schema:
+      type: boolean
+    value: true
 outputs_def:
   - handle: files
     description: Output
