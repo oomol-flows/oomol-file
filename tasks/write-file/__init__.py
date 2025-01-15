@@ -5,12 +5,12 @@ from typing import Literal
 
 WhenFileExists = Literal["override", "ignore", "rename", "error"]
 
-def main(inputs: dict):
-  binary: bytes = inputs["binary"]
-  file_name: str = inputs["file_name"]
-  output_folder: str = inputs["output_folder"]
-  mkdir: bool = inputs["mkdir"]
-  when_file_exists: WhenFileExists = inputs["when_file_exists"]
+def main(params: dict):
+  binary: bytes = params["binary"]
+  file_name: str = params["file_name"]
+  output_folder: str = params["output_folder"]
+  mkdir: bool = params["mkdir"]
+  when_file_exists: WhenFileExists = params["when_file_exists"]
 
   if mkdir:
     os.makedirs(output_folder, exist_ok=True)

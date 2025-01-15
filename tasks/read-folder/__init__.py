@@ -1,8 +1,8 @@
 import os
 
-def main(inputs: dict):
-  folder_path: str = inputs["folder"]
-  only_file_name: bool = inputs["only_file_name"]
+def main(params: dict):
+  folder_path: str = params["folder"]
+  only_file_name: bool = params["only_file_name"]
   files: list[str] = []
   folder_exists = False
 

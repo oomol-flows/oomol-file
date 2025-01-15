@@ -1,4 +1,9 @@
 {
+  "viewport": {
+    "x": 60.4166642659241,
+    "y": -119.99999523162853,
+    "zoom": 1
+  },
   "nodes": {
     "read-url#1": {
       "contentWidth": 450,
@@ -6,6 +11,18 @@
         "position": {
           "x": 155,
           "y": 194
+        }
+      },
+      "sections": {
+        "inputs": {
+          "collapsed": {
+            "query": {
+              "[]": true
+            },
+            "headers": {
+              "[]": true
+            }
+          }
         }
       }
     }

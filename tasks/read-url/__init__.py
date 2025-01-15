@@ -5,10 +5,10 @@ import urllib.parse
 
 from oocana import Context
 
-def main(inputs: dict, context: Context):
-  url = inputs["url"]
-  query: dict[str, str] = inputs["query"]
-  headers: dict[str, str] = inputs["headers"]
+def main(params: dict, context: Context):
+  url = params["url"]
+  query: dict[str, str] = params["query"]
+  headers: dict[str, str] = params["headers"]
 
   if len(query) > 0:
     query_string = urllib.parse.urlencode(query)

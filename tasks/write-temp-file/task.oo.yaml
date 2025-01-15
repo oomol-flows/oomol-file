@@ -1,7 +1,8 @@
 executor:
   name: python
   options:
-    entry: main.py
+    entry: __init__.py
+    spawn: false
 inputs_def:
   - handle: binary
     json_schema:

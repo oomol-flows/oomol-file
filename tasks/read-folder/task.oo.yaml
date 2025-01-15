@@ -24,7 +24,7 @@ ui:
 executor:
   name: python
   options:
+    entry: __init__.py
     spawn: false
-    entry: main.py
 title: Read folder
 icon: ":fa6-solid:folder-open:"
