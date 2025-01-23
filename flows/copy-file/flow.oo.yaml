@@ -1,12 +1,12 @@
 nodes:
-  - task: self::read-file
+  - task: self::file-to-binary
     title: "Read file #1"
     node_id: read-file#1
     inputs_from:
       - handle: file
         value: /app/workspace/demo/read/Demo.md
     description: Read origin file as binary
-  - task: self::write-file
+  - task: self::binary-to-file
     title: "Write file #1"
     node_id: write-file#1
     inputs_from:

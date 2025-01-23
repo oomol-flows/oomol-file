@@ -1,5 +1,5 @@
 nodes:
-  - task: self::read-url
+  - task: self::url-to-binary
     title: "Read URL #1"
     node_id: read-url#1
     inputs_from:
@@ -16,7 +16,7 @@ nodes:
       - handle: retry_times
         value: 1
     description: Download HTML file from URL as binary
-  - task: self::write-file
+  - task: self::binary-to-file
     title: "Write file #1"
     node_id: write-file#1
     inputs_from:

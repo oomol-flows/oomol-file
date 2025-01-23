@@ -1,9 +1,4 @@
 {
-  "viewport": {
-    "x": -36.58954944882789,
-    "y": -62.74707942796621,
-    "zoom": 0.9151009745228694
-  },
   "nodes": {
     "read-file#1": {
       "contentWidth": 420,
@@ -20,6 +15,41 @@
         "position": {
           "x": 635,
           "y": 190
+        }
+      }
+    },
+    "read-file#2": {
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    "copy-flie-list#2": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 2025,
+          "y": 1710
+        }
+      }
+    },
+    "copy-flie-list#3": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 2545.174880151862,
+          "y": 1736.9925855023905
+        }
+      }
+    },
+    "copy-flie-list#4": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 2190,
+          "y": 2085
         }
       }
     }

@@ -28,6 +28,7 @@ outputs_def:
   - handle: folder_exists
     json_schema:
       type: boolean
+    nullable: false
 ui:
   default_width: 450
 executor:

@@ -1,20 +1,21 @@
 inputs_def:
-  - handle: file
+  - handle: dir
     description: Input
     json_schema:
       type: string
-      ui:widget: file
+      ui:widget: dir
 outputs_def:
-  - handle: binary
+  - handle: dir
     description: Output
     json_schema:
-      contentMediaType: oomol/bin
+      type: string
+      ui:widget: dir
 ui:
   default_width: 450
 executor:
-  name: python
+  name: nodejs
   options:
-    entry: __init__.py
     spawn: false
-title: Read file
-icon: ":fa6-solid:file-export:"
+    entry: main.ts
+title: Empty dir
+icon: ":fa6-solid:trash-can:"

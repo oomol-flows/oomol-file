@@ -1,5 +1,5 @@
 nodes:
-  - task: self::read-file
+  - task: self::file-to-binary
     title: "Read file #1"
     node_id: read-file#1
     inputs_from:
