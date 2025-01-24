@@ -4,8 +4,8 @@
       "contentWidth": 450,
       "rfNode": {
         "position": {
-          "x": 270,
-          "y": 176
+          "x": 0,
+          "y": 174.5
         }
       },
       "sections": {
@@ -25,16 +25,16 @@
       "contentWidth": 450,
       "rfNode": {
         "position": {
-          "x": 791,
-          "y": 176
+          "x": 514,
+          "y": 0
         }
       }
     },
     "write-temp-file#1": {
       "rfNode": {
         "position": {
-          "x": 791,
-          "y": 564
+          "x": 529,
+          "y": 376
         }
       }
     },
@@ -42,17 +42,16 @@
       "contentWidth": 450,
       "rfNode": {
         "position": {
-          "x": 1635,
-          "y": 270
+          "x": 0,
+          "y": 742
         }
       }
     },
-    "dir-to-path-list#1": {
-      "contentWidth": 450,
+    "+python#1": {
       "rfNode": {
         "position": {
-          "x": 2145.4656807564475,
-          "y": 257
+          "x": 529,
+          "y": 698
         }
       }
     }

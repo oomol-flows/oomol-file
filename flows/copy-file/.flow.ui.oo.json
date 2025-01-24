@@ -4,8 +4,8 @@
       "contentWidth": 420,
       "rfNode": {
         "position": {
-          "x": 128,
-          "y": 190
+          "x": 15,
+          "y": 54
         }
       }
     },
@@ -13,43 +13,44 @@
       "contentWidth": 450,
       "rfNode": {
         "position": {
-          "x": 635,
-          "y": 190
-        }
-      }
-    },
-    "read-file#2": {
-      "rfNode": {
-        "position": {
-          "x": 0,
+          "x": 514,
           "y": 0
         }
       }
     },
-    "copy-flie-list#2": {
+    "dir_to_path_list#1": {
       "contentWidth": 450,
       "rfNode": {
         "position": {
-          "x": 2025,
-          "y": 1710
+          "x": 0,
+          "y": 335.5
         }
       }
     },
-    "copy-flie-list#3": {
+    "copy_flie_list#2": {
       "contentWidth": 450,
       "rfNode": {
         "position": {
-          "x": 2545.174880151862,
-          "y": 1736.9925855023905
+          "x": 514,
+          "y": 376
         }
       }
     },
-    "copy-flie-list#4": {
+    "file-to-path#1": {
       "contentWidth": 450,
       "rfNode": {
         "position": {
-          "x": 2190,
-          "y": 2085
+          "x": 0,
+          "y": 711.5
+        }
+      }
+    },
+    "copy_file#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 514,
+          "y": 698
         }
       }
     }

@@ -25,13 +25,39 @@ nodes:
     description: Save the binary data as target file
   - task: self::dir_to_path_list
     title: "Read folder #1"
-    node_id: read-folder#1
+    node_id: dir_to_path_list#1
     inputs_from:
       - handle: folder
-        value: /oomol-driver/oomol-storage/images
+        value: /app/workspace/demo/read
       - handle: sort
         value: false
       - handle: traverse
         value: false
       - handle: absolute_path
         value: true
+  - task: self::copy_flie_list
+    title: "Copy flie list #2"
+    node_id: copy_flie_list#2
+    inputs_from:
+      - handle: source_files
+        from_node:
+          - node_id: dir_to_path_list#1
+            output_handle: files
+      - handle: destination_dir
+        value:
+  - task: read-file::file-to-path
+    title: "File To Path #1"
+    node_id: file-to-path#1
+    inputs_from:
+      - handle: file
+        value: /app/workspace/demo/read/Demo.md
+  - task: self::copy_file
+    title: "Copy file #1"
+    node_id: copy_file#1
+    inputs_from:
+      - handle: source_file
+        from_node:
+          - node_id: file-to-path#1
+            output_handle: file
+      - handle: destination_dir
+        value: /oomol-driver/oomol-storage/images
