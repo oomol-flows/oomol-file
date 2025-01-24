@@ -60,4 +60,12 @@ nodes:
           - node_id: file-to-path#1
             output_handle: file
       - handle: destination_dir
-        value: /oomol-driver/oomol-storage/images
+        value:
+  - task: self::copy_dir
+    title: "Copy dir #1"
+    node_id: copy_dir#1
+    inputs_from:
+      - handle: source_dir
+        value: /app/workspace/demo/read
+      - handle: destination_dir
+        value:
