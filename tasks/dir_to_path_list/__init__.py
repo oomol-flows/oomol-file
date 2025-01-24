@@ -1,5 +1,5 @@
-from ntpath import isdir
 import os
+import locale
 
 def main(params: dict):
   folder_path: str = params["folder"]
@@ -19,7 +19,7 @@ def main(params: dict):
   _search(folder_path, "", files, traverse)
 
   if sort:
-    files.sort()
+    files = sorted(files, key=locale.strxfrm)
 
   if absolute_path:
     for i in range(len(files)):
