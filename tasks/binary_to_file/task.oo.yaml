@@ -40,5 +40,5 @@ executor:
   options:
     entry: __init__.py
     spawn: false
-title: Write file
+title: Binary to file
 icon: ":fa6-solid:file-import:"

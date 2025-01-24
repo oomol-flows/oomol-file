@@ -24,5 +24,5 @@ outputs_def:
       type: string
       minLength: 1
       ui:widget: file
-title: Write file (to path)
-icon: ":fa6-solid:file-import:"
+title: Binary save as file
+icon: ":fa6-solid:floppy-disk:"

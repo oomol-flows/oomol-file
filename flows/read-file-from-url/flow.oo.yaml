@@ -1,5 +1,5 @@
 nodes:
-  - task: self::read-url
+  - task: self::url_to_binary
     title: "Read URL #1"
     node_id: read-url#1
     inputs_from:
