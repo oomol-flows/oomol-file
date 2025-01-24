@@ -1,14 +1,15 @@
-version: 0.0.3
+version: 0.0.4
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: pip install pandas
   bootstrap: |
-    pnpm install && pip install -r requirements.txt
+    pnpm install
+    pip install -r requirements.txt
 icon: "./icon.png"
 dependencies:
   read-file: 0.0.10
 name: oomol-file
 displayName: File
 description: Related to operation files.
-releaseNotes: add new blocks
+releaseNotes: fix bugs
 repository: https://github.com/oomol-flows/oomol-file
