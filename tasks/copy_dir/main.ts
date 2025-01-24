@@ -21,6 +21,7 @@ export default async function (
     console.log('Folder copied successfully!');
   } catch (err) {
     console.error('Error copying folder:', err);
+    throw err;
   }
 
   return { destination_dir: target_dir };

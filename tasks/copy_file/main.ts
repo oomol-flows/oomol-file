@@ -32,5 +32,6 @@ async function copyFileToDir(sourceFile: string, destinationDir: string) {
     console.log('File copied successfully!');
   } catch (err) {
     console.error('Error copying file:', err);
+    throw err;
   }
 }

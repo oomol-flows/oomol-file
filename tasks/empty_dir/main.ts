@@ -19,6 +19,7 @@ export default async function (
     console.log(`Successfully emptied directory: ${dir}`);
   } catch (err) {
     console.error(`Error emptying directory: ${err}`);
+    throw err;
   }
 
   return { dir: dir };
