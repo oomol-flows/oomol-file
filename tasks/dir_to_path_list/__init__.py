@@ -1,5 +1,6 @@
 import os
-import locale
+
+from natsort import natsorted
 
 def main(params: dict):
   folder_path: str = params["folder"]
@@ -19,7 +20,7 @@ def main(params: dict):
   _search(folder_path, "", files, traverse)
 
   if sort:
-    files = sorted(files, key=locale.strxfrm)
+    files = natsorted(files)
 
   if absolute_path:
     for i in range(len(files)):
