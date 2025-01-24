@@ -38,12 +38,21 @@
         }
       }
     },
+    "read-folder#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 1635,
+          "y": 270
+        }
+      }
+    },
     "dir-to-path-list#1": {
       "contentWidth": 450,
       "rfNode": {
         "position": {
-          "x": 1897.2894748794047,
-          "y": 25.563182049507173
+          "x": 2145.4656807564475,
+          "y": 257
         }
       }
     }

@@ -37,4 +37,4 @@ executor:
     entry: __init__.py
     spawn: false
 title: Read folder
-icon: ":fa6-solid:folder-open:"
+icon: ":fa6-solid:folder-tree:"

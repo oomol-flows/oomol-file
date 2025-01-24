@@ -1,5 +1,5 @@
 nodes:
-  - task: self::file-to-binary
+  - task: self::file_to_binary
     title: "Read file #1"
     node_id: read-file#1
     inputs_from:
@@ -8,7 +8,7 @@ nodes:
     description: |-
       Read file from local file path. 
       Then you can see the downloaded binary data in log panel.
-  - task: self::read-folder
+  - task: self::dir_to_path_list
     title: "Read folder #1"
     node_id: read-folder#1
     inputs_from:

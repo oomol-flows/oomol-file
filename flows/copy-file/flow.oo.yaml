@@ -1,12 +1,12 @@
 nodes:
-  - task: self::file-to-binary
+  - task: self::file_to_binary
     title: "Read file #1"
     node_id: read-file#1
     inputs_from:
       - handle: file
         value: /app/workspace/demo/read/Demo.md
     description: Read origin file as binary
-  - task: self::binary-to-file
+  - task: self::binary_to_file
     title: "Write file #1"
     node_id: write-file#1
     inputs_from:
@@ -23,3 +23,15 @@ nodes:
       - handle: when_file_exists
         value: rename
     description: Save the binary data as target file
+  - task: self::dir_to_path_list
+    title: "Read folder #1"
+    node_id: read-folder#1
+    inputs_from:
+      - handle: folder
+        value: /oomol-driver/oomol-storage/images
+      - handle: sort
+        value: false
+      - handle: traverse
+        value: false
+      - handle: absolute_path
+        value: true

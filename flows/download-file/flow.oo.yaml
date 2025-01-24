@@ -1,5 +1,5 @@
 nodes:
-  - task: self::url-to-binary
+  - task: self::url_to_binary
     title: "Read URL #1"
     node_id: read-url#1
     inputs_from:
@@ -16,7 +16,7 @@ nodes:
       - handle: retry_times
         value: 1
     description: Download HTML file from URL as binary
-  - task: self::binary-to-file
+  - task: self::binary_to_file
     title: "Write file #1"
     node_id: write-file#1
     inputs_from:
@@ -33,7 +33,7 @@ nodes:
       - handle: when_file_exists
         value: rename
     description: Save the binary data as target file
-  - task: self::write-file-to-path
+  - task: self::binary_save_as_file
     title: "Write temp file #1"
     node_id: write-temp-file#1
     inputs_from:
@@ -46,3 +46,34 @@ nodes:
       - handle: file_path
         value:
     description: Save the binary data as temp file
+  - task: self::dir_to_path_list
+    title: "Read folder #1"
+    node_id: read-folder#1
+    inputs_from:
+      - handle: folder
+      - handle: sort
+        value: false
+      - handle: traverse
+        value: false
+      - handle: absolute_path
+        value: true
+  - task:
+      ui:
+        default_width: 450
+      inputs_def:
+        - handle: input
+          description: Input
+          json_schema:
+            type: string
+      outputs_def:
+        - handle: output
+          description: Output
+          json_schema:
+            type: string
+      executor:
+        name: python
+        options:
+          entry: scriptlets/+python#1.py
+    title: Python rrr
+    icon: ":logos:python:"
+    node_id: +python#1
