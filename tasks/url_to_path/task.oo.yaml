@@ -3,7 +3,6 @@ inputs_def:
     description: Input
     json_schema:
       type: string
-      ui:widget: file
 outputs_def:
   - handle: address
     description: Output
@@ -17,5 +16,5 @@ executor:
   options:
     spawn: false
     entry: main.ts
-title: "Url To Path "
+title: "URL to path "
 icon: ":fa6-solid:circle-down:"

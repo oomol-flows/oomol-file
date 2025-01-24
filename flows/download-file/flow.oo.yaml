@@ -46,3 +46,9 @@ nodes:
       - handle: file_path
         value:
     description: Save the binary data as temp file
+  - task: self::url_to_path
+    title: "URL to path  #1"
+    node_id: url_to_path#1
+    inputs_from:
+      - handle: url
+        value: https://oomol.com/
