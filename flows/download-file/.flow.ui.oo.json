@@ -45,6 +45,18 @@
           "x": 0,
           "y": 611.3278919582128
         }
+      },
+      "sections": {
+        "inputs": {
+          "collapsed": {
+            "query": {
+              "[]": true
+            },
+            "headers": {
+              "[]": true
+            }
+          }
+        }
       }
     }
   }

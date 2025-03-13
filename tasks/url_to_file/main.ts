@@ -1,56 +1,34 @@
 import type { Context } from "@oomol/types/oocana";
-import download from "download";
+
 import path from "path";
 import fs from "fs/promises";
+import download from "~/shared/downloader";
 
 type Inputs = {
-  url: string;
+  readonly url: string;
+  readonly query: Record<string, string>;
+  readonly headers: Record<string, string>;
+  readonly timeout: number | null;
+  readonly retry_times: number;
 };
 
 type Outputs = {
-  file_path: string;
+  readonly file_path: string;
 };
 
 export default async function (
   params: Inputs,
   context: Context<Inputs, Outputs>
 ): Promise<Outputs> {
-  const { url } = params;
-  const fileNameWithExt = path.basename(url);
-  const savePath = path.join(context.sessionDir, fileNameWithExt);
-
-  try {
-    await downloadResource(url, savePath, context);
-    return { file_path: savePath };
-  } catch (error) {
-    console.error(`Download failed: ${error.message}`);
-    throw error; // Re-throw the error to ensure it's propagated
-  }
-}
-
-async function downloadResource(
-  url: string,
-  destination: string,
-  context: Context<Inputs, Outputs>
-): Promise<void> {
-  const dir = path.dirname(destination);
-
-  // Ensure the destination directory exists
-  await fs.mkdir(dir, { recursive: true });
-
-  // Download and save the file
-  await new Promise<void>((resolve, reject) => {
-    download(url, dir, { filename: path.basename(destination) })
-      .on("downloadProgress", (progress) => {
-        context.reportProgress(progress.percent * 100);
-      })
-      .on("end", () => {
-        console.log(`Downloaded to ${destination}`);
-        resolve();
-      })
-      .on("error", (error) => {
-        console.error(`Download failed: ${error.message}`);
-        reject(error);
-      });
+  const fileNameWithExt = path.basename(params.url);
+  const filePath = path.join(context.sessionDir, fileNameWithExt);
+  const folderPath = path.dirname(filePath);
+  const binary = await download({
+    ...params,
+    reportProgress: p => context.reportProgress(p),
   });
+  await fs.mkdir(folderPath, { recursive: true });
+  await fs.writeFile(filePath, binary);
+
+  return { file_path: filePath };
 }
