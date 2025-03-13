@@ -46,8 +46,8 @@ nodes:
       - handle: file_path
         value:
     description: Save the binary data as temp file
-  - task: self::url_to_path
-    title: "URL to path  #1"
+  - task: self::url_to_file
+    title: "URL to file  #1"
     node_id: url_to_path#1
     inputs_from:
       - handle: url

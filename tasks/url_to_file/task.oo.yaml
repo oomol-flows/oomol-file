@@ -4,7 +4,7 @@ inputs_def:
     json_schema:
       type: string
 outputs_def:
-  - handle: address
+  - handle: file
     description: Output
     json_schema:
       type: string
@@ -16,5 +16,5 @@ executor:
   options:
     spawn: false
     entry: main.ts
-title: "URL to path "
+title: "URL to file "
 icon: ":fa6-solid:circle-down:"

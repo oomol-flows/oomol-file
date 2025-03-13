@@ -17,5 +17,5 @@ executor:
   options:
     spawn: false
     entry: main.ts
-title: Empty folder
+title: Empty dir
 icon: ":fa6-solid:trash-can:"

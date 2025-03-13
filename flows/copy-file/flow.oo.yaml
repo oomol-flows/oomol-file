@@ -23,7 +23,7 @@ nodes:
       - handle: when_file_exists
         value: rename
     description: Save the binary data as target file
-  - task: self::dir_to_path_list
+  - task: self::list_files_from_folder
     title: "Read folder #1"
     node_id: dir_to_path_list#1
     inputs_from:
