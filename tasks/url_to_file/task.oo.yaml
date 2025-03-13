@@ -17,4 +17,4 @@ executor:
     spawn: false
     entry: main.ts
 title: "URL to file "
-icon: ":fa6-solid:circle-down:"
+icon: ":fa6-solid:cloud-arrow-down:"
