@@ -61,11 +61,11 @@ nodes:
             output_handle: file
       - handle: destination_dir
         value:
-  - task: self::copy_dir
-    title: "Copy dir #1"
+  - task: self::copy_folder
+    title: "Copy folder #1"
     node_id: copy_dir#1
     inputs_from:
-      - handle: source_dir
+      - handle: source_folder
         value: /app/workspace/demo/read
-      - handle: destination_dir
+      - handle: destination_folder
         value:

@@ -1,17 +1,17 @@
 inputs_def:
-  - handle: source_dir
+  - handle: source_folder
     description: Input
     json_schema:
       type: string
       ui:widget: dir
-  - handle: destination_dir
+  - handle: destination_folder
     json_schema:
       type: string
       ui:widget: dir
     value:
     nullable: true
 outputs_def:
-  - handle: destination_dir
+  - handle: destination_folder
     description: Output
     json_schema:
       type: string
@@ -23,5 +23,5 @@ executor:
   options:
     spawn: false
     entry: main.ts
-title: Copy dir
+title: Copy folder
 icon: ":fa6-solid:copyright:"
