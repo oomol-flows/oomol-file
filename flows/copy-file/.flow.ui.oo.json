@@ -36,15 +36,6 @@
         }
       }
     },
-    "file-to-path#1": {
-      "contentWidth": 450,
-      "rfNode": {
-        "position": {
-          "x": 0,
-          "y": 711.5
-        }
-      }
-    },
     "copy_file#1": {
       "contentWidth": 450,
       "rfNode": {
@@ -59,7 +50,16 @@
       "rfNode": {
         "position": {
           "x": 0,
-          "y": 1021.6881823727635
+          "y": 886.0375532248111
+        }
+      }
+    },
+    "+value#1": {
+      "contentWidth": 415,
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 698
         }
       }
     }

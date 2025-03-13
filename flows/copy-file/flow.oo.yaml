@@ -1,13 +1,13 @@
 nodes:
   - task: self::file_to_binary
-    title: "Read file #1"
+    title: "File to binary"
     node_id: read-file#1
     inputs_from:
-      - handle: file
+      - handle: file_path
         value: /app/workspace/demo/read/Demo.md
     description: Read origin file as binary
   - task: self::binary_to_file
-    title: "Write file #1"
+    title: "Binary to file"
     node_id: write-file#1
     inputs_from:
       - handle: binary
@@ -24,7 +24,7 @@ nodes:
         value: rename
     description: Save the binary data as target file
   - task: self::list_files_from_folder
-    title: "Read folder #1"
+    title: "List files from folder"
     node_id: dir_to_path_list#1
     inputs_from:
       - handle: folder
@@ -36,29 +36,23 @@ nodes:
       - handle: absolute_path
         value: true
   - task: self::copy_flies
-    title: "Copy flie list #2"
+    title: "Copy files"
     node_id: copy_flie_list#2
     inputs_from:
       - handle: source_files
         from_node:
           - node_id: dir_to_path_list#1
-            output_handle: files
+            output_handle: file_paths
       - handle: destination_folder
         value:
-  - task: read-file::file-to-path
-    title: "File To Path #1"
-    node_id: file-to-path#1
-    inputs_from:
-      - handle: file
-        value: /app/workspace/demo/read/Demo.md
   - task: self::copy_file
     title: "Copy file #1"
     node_id: copy_file#1
     inputs_from:
       - handle: source_file
         from_node:
-          - node_id: file-to-path#1
-            output_handle: file
+          - node_id: +value#1
+            output_handle: file_path
       - handle: destination_folder
         value:
   - task: self::copy_folder
@@ -69,3 +63,11 @@ nodes:
         value: /app/workspace/demo/read
       - handle: destination_folder
         value:
+  - values:
+      - handle: file_path
+        json_schema:
+          type: string
+          ui:widget: file
+        value: /app/workspace/demo/read/Demo.md
+    title: File
+    node_id: +value#1

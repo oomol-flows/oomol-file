@@ -8,7 +8,7 @@ type Inputs = {
 };
 
 type Outputs = {
-  file: string;
+  file_path: string;
 };
 
 export default async function (
@@ -21,7 +21,7 @@ export default async function (
 
   try {
     await downloadResource(url, savePath, context);
-    return { file: savePath };
+    return { file_path: savePath };
   } catch (error) {
     console.error(`Download failed: ${error.message}`);
     throw error; // Re-throw the error to ensure it's propagated

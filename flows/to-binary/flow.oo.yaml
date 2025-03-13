@@ -1,0 +1,30 @@
+nodes:
+  - task: self::file_to_binary
+    title: "File to binary"
+    node_id: read-file#1
+    inputs_from:
+      - handle: file_path
+        value: /app/workspace/demo/read/Demo.md
+    description: |-
+      Read file from local file path. 
+      Then you can see the downloaded binary data in log panel.
+  - node_id: read-url#1
+    node_type: task_node
+    title: "URL to binary #2"
+    description: |-
+      Read HTML file from URL. 
+      Then you can see the downloaded binary data in log panel.
+    inputs_from:
+      - handle: url
+        value: https://oomol.com/
+      - handle: query
+        value:
+          {}
+      - handle: headers
+        value:
+          {}
+      - handle: timeout
+        value: 0
+      - handle: retry_times
+        value: 1
+    task: self::url_to_binary
