@@ -35,7 +35,7 @@ nodes:
         value: false
       - handle: absolute_path
         value: true
-  - task: self::copy_flie_list
+  - task: self::copy_flies
     title: "Copy flie list #2"
     node_id: copy_flie_list#2
     inputs_from:
@@ -43,7 +43,7 @@ nodes:
         from_node:
           - node_id: dir_to_path_list#1
             output_handle: files
-      - handle: destination_dir
+      - handle: destination_folder
         value:
   - task: read-file::file-to-path
     title: "File To Path #1"
@@ -59,7 +59,7 @@ nodes:
         from_node:
           - node_id: file-to-path#1
             output_handle: file
-      - handle: destination_dir
+      - handle: destination_folder
         value:
   - task: self::copy_folder
     title: "Copy folder #1"

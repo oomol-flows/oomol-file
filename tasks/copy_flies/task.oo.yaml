@@ -5,14 +5,14 @@ inputs_def:
       type: array
       items:
         type: string
-  - handle: destination_dir
+  - handle: destination_folder
     json_schema:
       type: string
       ui:widget: dir
     value:
     nullable: true
 outputs_def:
-  - handle: destination_dir
+  - handle: destination_folder
     description: Output
     json_schema:
       type: string
@@ -24,5 +24,5 @@ executor:
   options:
     spawn: false
     entry: main.ts
-title: Copy flie list
+title: Copy flies
 icon: ":fa6-solid:copy:"

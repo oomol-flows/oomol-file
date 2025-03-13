@@ -4,14 +4,14 @@ inputs_def:
     json_schema:
       type: string
       ui:widget: file
-  - handle: destination_dir
+  - handle: destination_folder
     json_schema:
       type: string
       ui:widget: dir
     value:
     nullable: true
 outputs_def:
-  - handle: destination_dir
+  - handle: destination_folder
     description: Output
     json_schema:
       type: string

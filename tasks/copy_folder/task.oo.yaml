@@ -24,4 +24,4 @@ executor:
     spawn: false
     entry: main.ts
 title: Copy folder
-icon: ":fa6-solid:copyright:"
+icon: ":fa6-solid:copy:"

@@ -4,21 +4,23 @@ import path from "path";
 
 type Inputs = {
   source_file: string;
-  destination_dir: string | null;
+  destination_folder: string | null;
 };
 type Outputs = {
-  destination_dir: string;
+  destination_folder: string;
 };
 
 export default async function (
   params: Inputs,
   context: Context<Inputs, Outputs>
 ): Promise<Outputs> {
-  const { source_file, destination_dir } = params;
-  const target_dir = destination_dir === null ? context.sessionDir : destination_dir;
-  await copyFileToDir(source_file, target_dir);
-
-  return { destination_dir: target_dir };
+  const { source_file } = params;
+  let { destination_folder } = params;
+  if (destination_folder === null) {
+    destination_folder = context.sessionDir;
+  }
+  await copyFileToDir(source_file, destination_folder);
+  return { destination_folder };
 }
 
 async function copyFileToDir(sourceFile: string, destinationDir: string) {
