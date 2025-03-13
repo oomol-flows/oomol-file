@@ -1,5 +1,4 @@
 {
-  "include": ["."],
   "compilerOptions": {
     "target": "ESNext",
     "module": "Preserve",
