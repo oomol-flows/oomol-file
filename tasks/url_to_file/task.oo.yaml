@@ -1,15 +1,14 @@
 inputs_def:
-  - handle: dir
+  - handle: url
     description: Input
     json_schema:
       type: string
-      ui:widget: dir
 outputs_def:
-  - handle: dir
+  - handle: file_path
     description: Output
     json_schema:
       type: string
-      ui:widget: dir
+      ui:widget: file
 ui:
   default_width: 450
 executor:
@@ -17,5 +16,5 @@ executor:
   options:
     spawn: false
     entry: main.ts
-title: Empty dir
-icon: ":fa6-solid:trash-can:"
+title: "URL to file "
+icon: ":fa6-solid:cloud-arrow-down:"

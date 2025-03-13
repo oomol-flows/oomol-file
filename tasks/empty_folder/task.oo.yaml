@@ -1,18 +1,11 @@
 inputs_def:
-  - handle: source_files
+  - handle: folder
     description: Input
-    json_schema:
-      type: array
-      items:
-        type: string
-  - handle: destination_dir
     json_schema:
       type: string
       ui:widget: dir
-    value:
-    nullable: true
 outputs_def:
-  - handle: destination_dir
+  - handle: folder
     description: Output
     json_schema:
       type: string
@@ -24,5 +17,5 @@ executor:
   options:
     spawn: false
     entry: main.ts
-title: Copy flie list
-icon: ":fa6-solid:copy:"
+title: Empty folder
+icon: ":fa6-solid:trash-can:"

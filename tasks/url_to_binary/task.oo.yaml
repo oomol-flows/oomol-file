@@ -44,5 +44,5 @@ executor:
   options:
     entry: main.ts
     spawn: false
-title: Read URL
+title: URL to binary
 icon: ":fa6-solid:cloud-arrow-down:"

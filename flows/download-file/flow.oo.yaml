@@ -1,6 +1,6 @@
 nodes:
   - task: self::url_to_binary
-    title: "Read URL #1"
+    title: "URL to binary"
     node_id: read-url#1
     inputs_from:
       - handle: url
@@ -17,7 +17,7 @@ nodes:
         value: 1
     description: Download HTML file from URL as binary
   - task: self::binary_to_file
-    title: "Write file #1"
+    title: "Binary to file"
     node_id: write-file#1
     inputs_from:
       - handle: binary
@@ -34,7 +34,7 @@ nodes:
         value: rename
     description: Save the binary data as target file
   - task: self::binary_save_as_file
-    title: "Write temp file #1"
+    title: "Binary save as file"
     node_id: write-temp-file#1
     inputs_from:
       - handle: binary
@@ -46,8 +46,8 @@ nodes:
       - handle: file_path
         value:
     description: Save the binary data as temp file
-  - task: self::url_to_path
-    title: "URL to path  #1"
+  - task: self::url_to_file
+    title: "URL to file"
     node_id: url_to_path#1
     inputs_from:
       - handle: url

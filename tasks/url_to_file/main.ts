@@ -8,7 +8,7 @@ type Inputs = {
 };
 
 type Outputs = {
-  address: string;
+  file_path: string;
 };
 
 export default async function (
@@ -17,11 +17,11 @@ export default async function (
 ): Promise<Outputs> {
   const { url } = params;
   const fileNameWithExt = path.basename(url);
-  const saveAddress = path.join(context.sessionDir, fileNameWithExt);
+  const savePath = path.join(context.sessionDir, fileNameWithExt);
 
   try {
-    await downloadResource(url, saveAddress, context);
-    return { address: saveAddress };
+    await downloadResource(url, savePath, context);
+    return { file_path: savePath };
   } catch (error) {
     console.error(`Download failed: ${error.message}`);
     throw error; // Re-throw the error to ensure it's propagated

@@ -1,5 +1,5 @@
 inputs_def:
-  - handle: file
+  - handle: file_path
     description: Input
     json_schema:
       type: string

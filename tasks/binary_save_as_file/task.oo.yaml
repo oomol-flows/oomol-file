@@ -25,4 +25,4 @@ outputs_def:
       minLength: 1
       ui:widget: file
 title: Binary save as file
-icon: ":fa6-solid:floppy-disk:"
+icon: ":fa6-solid:file-import:"

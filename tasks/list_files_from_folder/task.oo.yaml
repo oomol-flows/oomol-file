@@ -18,7 +18,7 @@ inputs_def:
       type: boolean
     value: true
 outputs_def:
-  - handle: files
+  - handle: file_paths
     description: Output
     json_schema:
       type: array
@@ -36,5 +36,5 @@ executor:
   options:
     entry: main.ts
     spawn: false
-title: Read folder
+title: List files from folder
 icon: ":fa6-solid:folder-tree:"

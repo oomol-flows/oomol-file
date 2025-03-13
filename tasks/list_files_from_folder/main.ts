@@ -9,7 +9,7 @@ type Inputs = {
 };
 
 type Outputs = {
-  readonly files: string[];
+  readonly file_paths: string[];
   readonly folder_exists: boolean;
 };
 
@@ -18,18 +18,18 @@ export default async function (params: Inputs): Promise<Outputs> {
   const folderExists = await isFolderExists(folder);
 
   if (!folderExists) {
-    return { files: [], folder_exists: false };
+    return { file_paths: [], folder_exists: false };
   }
-  let files: string[] = [];
-  await search(folder, "", files, traverse);
+  let file_paths: string[] = [];
+  await search(folder, "", file_paths, traverse);
 
   if (sort) {
-    files.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+    file_paths.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
   }
   if (absolute_path) {
-    files = files.map((file) => path.join(folder, file));
+    file_paths = file_paths.map((file) => path.join(folder, file));
   }
-  return { files, folder_exists: true };
+  return { file_paths, folder_exists: true };
 };
 
 async function isFolderExists(folder: string): Promise<boolean> {
