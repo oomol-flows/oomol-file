@@ -40,9 +40,9 @@ outputs_def:
 ui:
   default_width: 450
 executor:
-  name: python
+  name: nodejs
   options:
-    entry: __init__.py
+    entry: main.ts
     spawn: false
 title: Read URL
 icon: ":fa6-solid:cloud-arrow-down:"

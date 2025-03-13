@@ -1,8 +1,8 @@
 executor:
-  name: python
+  name: nodejs
   options:
-    entry: __init__.py
-    spawn: false
+    entry: main.ts
+    spawn: true
 inputs_def:
   - handle: binary
     json_schema:

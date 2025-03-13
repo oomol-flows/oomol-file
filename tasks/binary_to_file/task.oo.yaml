@@ -36,9 +36,9 @@ outputs_def:
 ui:
   default_width: 450
 executor:
-  name: python
+  name: nodejs
   options:
-    entry: __init__.py
+    entry: main.ts
     spawn: false
 title: Binary to file
 icon: ":fa6-solid:file-import:"
