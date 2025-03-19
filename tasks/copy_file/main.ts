@@ -1,5 +1,5 @@
 import type { Context } from "@oomol/types/oocana";
-import fs from "fs-extra";
+import fs from "node:fs";
 import path from "path";
 
 type Inputs = {
@@ -25,7 +25,7 @@ export default async function (
 
 async function copyFileToDir(sourceFile: string, destinationDir: string) {
   try {
-    await fs.ensureDir(destinationDir);
+    await fs.promises.mkdir(destinationDir, { recursive: true });
 
     const fileName = path.basename(sourceFile);
     const destinationFile = path.join(destinationDir, fileName);
@@ -35,7 +35,7 @@ async function copyFileToDir(sourceFile: string, destinationDir: string) {
       return;
     }
 
-    await fs.copy(sourceFile, destinationFile);
+    await fs.promises.cp(sourceFile, destinationFile, { recursive: true });
     console.log(`File ${fileName} copied successfully!`);
   } catch (err) {
     console.error("Error copying file:", err);

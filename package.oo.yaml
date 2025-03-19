@@ -2,7 +2,8 @@ version: 0.0.9
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: pip install pandas
-  bootstrap: pnpm install
+  bootstrap: |
+    echo 'bootstrap success'
 icon: "./icon.png"
 dependencies:
   {}

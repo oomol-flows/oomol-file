@@ -1,7 +1,3 @@
-import type { Response, HeadersInit } from "node-fetch";
-
-import fetch from "node-fetch";
-
 export type DownloadParams = {
   readonly url: string;
   readonly query: Record<string, string>;
