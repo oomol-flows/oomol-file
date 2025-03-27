@@ -10,19 +10,18 @@ inputs_def:
   - handle: suffix
     json_schema:
       type: string
-    nullable: true
     value:
+    nullable: true
   - handle: file_path
     json_schema:
       type: string
-      ui:widget: file
-    nullable: true
+      ui:widget: save
     value:
+    nullable: true
 outputs_def:
   - handle: file_path
     json_schema:
       type: string
-      minLength: 1
-      ui:widget: file
+      ui:widget: save
 title: Binary save as file
 icon: ":fa6-solid:file-import:"

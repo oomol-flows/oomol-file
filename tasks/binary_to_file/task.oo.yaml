@@ -32,7 +32,7 @@ outputs_def:
   - handle: file_path
     json_schema:
       type: string
-      ui:widget: file
+      ui:widget: save
 ui:
   default_width: 450
 executor:

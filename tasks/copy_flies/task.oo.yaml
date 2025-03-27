@@ -5,6 +5,7 @@ inputs_def:
       type: array
       items:
         type: string
+        ui:widget: file
   - handle: destination_folder
     json_schema:
       type: string
