@@ -1,5 +1,5 @@
 import type { Context } from "@oomol/types/oocana";
-import fs from "fs-extra"
+import fs from "node:fs"
 import path from "path";
 
 type Inputs = {
@@ -21,7 +21,7 @@ export default async function (
     destination_folder = path.join(context.sessionDir, context.jobId);
   }
   try {
-    await fs.copy(source_folder, destination_folder);
+    await fs.promises.cp(source_folder, destination_folder, { recursive: true });
     console.log('Folder copied successfully!');
   } catch (err) {
     console.error('Error copying folder:', err);

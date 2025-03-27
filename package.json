@@ -1,12 +1,8 @@
 {
   "private": true,
-  "dependencies": {
-    "@types/download": "^8.0.5",
-    "@types/fs-extra": "^11.0.4",
-    "fs-extra": "^11.3.0",
-    "node-fetch": "^3.3.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/node-fetch": "^2.6.12"
+    "@types/node": "^22.13.10",
+    "@oomol/types": "^0.0.10"
   }
 }
