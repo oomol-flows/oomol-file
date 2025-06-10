@@ -8,5 +8,5 @@ dependencies:
 name: oomol-file
 displayName: File
 description: Related to operation files.
-releaseNotes: add filter block
+releaseNotes: add filter block and fiex bug
 repository: https://github.com/oomol-flows/oomol-file
