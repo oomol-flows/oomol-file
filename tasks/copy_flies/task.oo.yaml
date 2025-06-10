@@ -26,4 +26,4 @@ executor:
     spawn: false
     entry: main.ts
 title: Copy flies
-icon: ":fa6-solid:copy:"
+icon: ":carbon:copy-file:"

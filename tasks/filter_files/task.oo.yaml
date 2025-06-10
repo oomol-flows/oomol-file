@@ -1,0 +1,34 @@
+ui:
+  default_width: 450
+inputs_def:
+  - handle: files
+    description: Input
+    json_schema:
+      type: array
+  - handle: type
+    json_schema:
+      enum:
+        - image
+        - video
+        - audio
+        - pdf
+      ui:options:
+        labels:
+          - Image
+          - Video
+          - Audio
+          - PDF
+    value: image
+    nullable: false
+outputs_def:
+  - handle: files
+    description: Output
+    json_schema:
+      type: array
+executor:
+  name: python
+  options:
+    entry: __init__.py
+    spawn: false
+title: Filter Files
+icon: ":carbon:filter:"

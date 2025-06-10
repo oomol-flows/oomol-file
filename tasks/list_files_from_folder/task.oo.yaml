@@ -37,4 +37,4 @@ executor:
     entry: main.ts
     spawn: false
 title: List files from folder
-icon: ":fa6-solid:folder-tree:"
+icon: ":carbon:list-boxes:"
