@@ -1,0 +1,22 @@
+{
+  "nodes": {
+    "filter_files#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 318.5,
+          "y": 330.5
+        }
+      }
+    },
+    "list_files_from_folder#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": -219.37340380103126,
+          "y": 330.5
+        }
+      }
+    }
+  }
+}

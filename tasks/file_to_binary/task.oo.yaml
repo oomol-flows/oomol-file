@@ -17,4 +17,4 @@ executor:
     entry: main.ts
     spawn: false
 title: File to binary
-icon: ":fa6-solid:file-export:"
+icon: ":carbon:document:"

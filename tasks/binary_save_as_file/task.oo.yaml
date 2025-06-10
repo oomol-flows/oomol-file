@@ -24,4 +24,4 @@ outputs_def:
       type: string
       ui:widget: save
 title: Binary save as file
-icon: ":fa6-solid:file-import:"
+icon: ":carbon:transform-binary:"

@@ -1,13 +1,12 @@
-version: 0.0.10
+version: 0.0.11
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: pip install pandas
   bootstrap: pnpm install
 icon: "./icon.png"
 dependencies:
-  {}
 name: oomol-file
 displayName: File
 description: Related to operation files.
-releaseNotes: replace some of types to be "Save as"
+releaseNotes: add filter block and fiex bug
 repository: https://github.com/oomol-flows/oomol-file

@@ -41,4 +41,4 @@ executor:
     entry: main.ts
     spawn: false
 title: Binary to file
-icon: ":fa6-solid:file-import:"
+icon: ":carbon:transform-binary:"

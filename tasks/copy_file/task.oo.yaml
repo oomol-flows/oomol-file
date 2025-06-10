@@ -24,4 +24,4 @@ executor:
     spawn: false
     entry: main.ts
 title: Copy file
-icon: ":fa6-solid:copy:"
+icon: ":carbon:copy:"

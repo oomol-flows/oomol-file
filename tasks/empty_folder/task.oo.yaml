@@ -18,4 +18,4 @@ executor:
     spawn: false
     entry: main.ts
 title: Empty folder
-icon: ":fa6-solid:trash-can:"
+icon: ":carbon:delete:"
