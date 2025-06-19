@@ -4,17 +4,19 @@ import path from "path";
 import fs from "fs/promises";
 import download from "~/shared/downloader";
 
+//#region generated meta
 type Inputs = {
-  readonly url: string;
-  readonly query: Record<string, string>;
-  readonly headers: Record<string, string>;
-  readonly timeout: number | null;
-  readonly retry_times: number;
+  url: string;
+  ext_name: string | null;
+  query: Record<string, any>;
+  headers: Record<string, any>;
+  timeout: number;
+  retry_times: number;
 };
-
 type Outputs = {
-  readonly file_path: string;
+  file_path: string;
 };
+//#endregion
 
 export default async function (
   params: Inputs,

@@ -3,6 +3,11 @@ inputs_def:
     description: Input
     json_schema:
       type: string
+  - handle: ext_name
+    json_schema:
+      type: string
+    value:
+    nullable: true
   - handle: query
     json_schema:
       type: object
