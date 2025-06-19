@@ -7,11 +7,11 @@ import download from "~/shared/downloader";
 //#region generated meta
 type Inputs = {
   url: string;
-  ext_name: string | null;
   query: Record<string, any>;
   headers: Record<string, any>;
   timeout: number;
   retry_times: number;
+  reset_filename: boolean;
 };
 type Outputs = {
   file_path: string;
@@ -19,29 +19,24 @@ type Outputs = {
 //#endregion
 
 export default async function (params: Inputs, context: Context<Inputs, Outputs>): Promise<Outputs> {
-  let [fileName, extName] = splitExtNames(path.basename(params.url));
-
-  if (extName === null) {
-    extName = params.ext_name;
-  }
-  if (extName !== null) {
-    extName = extName.replace(/^\./, "");
-    fileName = `${fileName}.${extName}`;
-  }
+  const rawFilename = path.basename(params.url);
   const folderPath = path.join(context.sessionDir, "downloading");
   const binary = await download({
     ...params,
     reportProgress: p => context.reportProgress(p),
   });
-  let filePath = path.join(folderPath, fileName);
+  let [fileName, extName] = splitExtNames(rawFilename);
+  let filePath = path.join(folderPath, rawFilename);
 
-  if (await fileExists(filePath)) {
+  if (params.reset_filename || await fileExists(filePath)) {
     fileName = context.jobId;
-    if (extName != null) {
-      fileName = `${fileName}.${extName}`;
-    }
-    filePath = path.join(folderPath, fileName);
   }
+  if (extName !== null) {
+    extName = extName.replace(/^\./, "");
+    fileName = `${fileName}.${extName}`;
+  }
+  filePath = path.join(folderPath, fileName);
+
   await fs.mkdir(folderPath, { recursive: true });
   await fs.writeFile(filePath, binary);
 

@@ -6,13 +6,13 @@ nodes:
       - handle: file_path
         value: /app/workspace/demo/read/Demo.md
     description: |-
-      Read file from local file path. 
+      Read file from local file path.
       Then you can see the downloaded binary data in log panel.
   - node_id: read-url#1
     node_type: task_node
     title: "URL to binary #2"
     description: |-
-      Read HTML file from URL. 
+      Read HTML file from URL.
       Then you can see the downloaded binary data in log panel.
     inputs_from:
       - handle: url
