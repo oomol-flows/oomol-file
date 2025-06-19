@@ -1,17 +1,18 @@
 import type { Context } from "@oomol/types/oocana";
 import download from "~/shared/downloader";
 
+//#region generated meta
 type Inputs = {
-  readonly url: string;
-  readonly query: Record<string, string>;
-  readonly headers: Record<string, string>;
-  readonly timeout: number | null;
-  readonly retry_times: number;
+  url: string;
+  query: Record<string, any>;
+  headers: Record<string, any>;
+  timeout: number;
+  retry_times: number;
 };
-
 type Outputs = {
-  readonly binary: Buffer;
+  binary: Buffer;
 };
+//#endregion
 
 export default async function(params: Inputs, context: Context<Inputs, Outputs>): Promise<Outputs> {
   const binary = await download({

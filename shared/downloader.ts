@@ -4,9 +4,9 @@ import fetch from "node-fetch";
 
 export type DownloadParams = {
   readonly url: string;
-  readonly query: Record<string, string>;
-  readonly headers: Record<string, string>;
-  readonly timeout: number | null;
+  readonly query: Record<string, any>;
+  readonly headers: Record<string, any>;
+  readonly timeout: number;
   readonly retry_times: number;
   readonly reportProgress: (p: number) => void;
 };
@@ -24,13 +24,13 @@ export default async function(params: DownloadParams): Promise<Buffer> {
   return await download(response, reportProgress);
 };
 
-async function fetchWithRetry(url: string, retries: number, headers: HeadersInit, timeout: number | null): Promise<Response> {
+async function fetchWithRetry(url: string, retries: number, headers: HeadersInit, timeout: number): Promise<Response> {
   for (let i = 0; i < retries; i ++) {
     let signal: AbortSignal | undefined;
     let timeoutId: null | ReturnType<typeof setTimeout> = null;
 
     try {
-      if (typeof timeout === "number" && timeout > 0) {
+      if (timeout > 0) {
         const controller = new AbortController();
         signal = controller.signal;
         timeoutId = setTimeout(() => controller.abort(), timeout * 1000);
