@@ -31,7 +31,7 @@ inputs_def:
       minimum: 1
     value: 1
     nullable: false
-  - handle: reset_raw_filename
+  - handle: reset_filename
     json_schema:
       type: boolean
     value: true

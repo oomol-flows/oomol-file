@@ -11,7 +11,7 @@ type Inputs = {
   headers: Record<string, any>;
   timeout: number;
   retry_times: number;
-  reset_raw_filename: boolean;
+  reset_filename: boolean;
 };
 type Outputs = {
   file_path: string;
@@ -28,7 +28,7 @@ export default async function (params: Inputs, context: Context<Inputs, Outputs>
   let [fileName, extName] = splitExtNames(rawFilename);
   let filePath = path.join(folderPath, rawFilename);
 
-  if (params.reset_raw_filename || await fileExists(filePath)) {
+  if (params.reset_filename || await fileExists(filePath)) {
     fileName = context.jobId;
   }
   if (extName !== null) {
