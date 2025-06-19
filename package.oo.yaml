@@ -5,6 +5,7 @@ scripts:
   bootstrap: pnpm install
 icon: "./icon.png"
 dependencies:
+  {}
 name: oomol-file
 displayName: File
 description: Related to operation files.

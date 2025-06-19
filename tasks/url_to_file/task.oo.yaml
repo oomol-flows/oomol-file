@@ -3,11 +3,6 @@ inputs_def:
     description: Input
     json_schema:
       type: string
-  - handle: ext_name
-    json_schema:
-      type: string
-    value:
-    nullable: true
   - handle: query
     json_schema:
       type: object
@@ -35,6 +30,11 @@ inputs_def:
       type: integer
       minimum: 1
     value: 1
+    nullable: false
+  - handle: reset_raw_filename
+    json_schema:
+      type: boolean
+    value: true
     nullable: false
 outputs_def:
   - handle: file_path
