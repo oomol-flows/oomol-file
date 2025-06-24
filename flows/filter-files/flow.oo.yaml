@@ -19,4 +19,4 @@ nodes:
         value: false
       - handle: absolute_path
         value: true
-    task: oomol-file::list_files_from_folder
+    task: self::list_files_from_folder
