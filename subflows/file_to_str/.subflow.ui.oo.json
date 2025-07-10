@@ -1,0 +1,40 @@
+{
+  "nodes": {
+    "file_to_binary#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 489.38426574540284,
+          "y": -257.43173616883854
+        }
+      }
+    },
+    "decode-string#1": {
+      "contentWidth": 350,
+      "rfNode": {
+        "position": {
+          "x": 1010.2828172238393,
+          "y": -100
+        }
+      }
+    }
+  },
+  "pseudoNodes": {
+    "input": {
+      "rfNode": {
+        "position": {
+          "x": -3.264133409833164,
+          "y": -39.94132665659002
+        }
+      }
+    },
+    "output": {
+      "rfNode": {
+        "position": {
+          "x": 1443.6413458359903,
+          "y": 44
+        }
+      }
+    }
+  }
+}
