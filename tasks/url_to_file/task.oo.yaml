@@ -50,4 +50,4 @@ executor:
     spawn: false
     entry: main.ts
 title: "URL to file "
-icon: ":carbon:download:"
+icon: ":carbon:cloud-download:"

@@ -17,4 +17,4 @@ executor:
     entry: main.ts
     spawn: false
 title: File to binary
-icon: ":carbon:document:"
+icon: ":carbon:document-blank:"

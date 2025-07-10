@@ -24,4 +24,4 @@ executor:
     spawn: false
     entry: main.ts
 title: Copy file
-icon: ":carbon:copy:"
+icon: ":carbon:document-multiple-01:"

@@ -1,0 +1,52 @@
+{
+  "nodes": {
+    "url_to_binary#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 482.31360377442695,
+          "y": -100
+        }
+      }
+    },
+    "decode-string#1": {
+      "contentWidth": 350,
+      "rfNode": {
+        "position": {
+          "x": 1020.1581681708915,
+          "y": -100
+        }
+      }
+    }
+  },
+  "pseudoNodes": {
+    "input": {
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": -100
+        }
+      },
+      "sections": {
+        "subflowInput": {
+          "collapsed": {
+            "query": {
+              "[]": true
+            },
+            "headers": {
+              "[]": true
+            }
+          }
+        }
+      }
+    },
+    "output": {
+      "rfNode": {
+        "position": {
+          "x": 1466.286914875093,
+          "y": 44
+        }
+      }
+    }
+  }
+}
