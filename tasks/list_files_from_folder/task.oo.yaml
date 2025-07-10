@@ -37,4 +37,4 @@ executor:
     entry: main.ts
     spawn: false
 title: List files from folder
-icon: ":carbon:list-boxes:"
+icon: ":carbon:folder-details:"

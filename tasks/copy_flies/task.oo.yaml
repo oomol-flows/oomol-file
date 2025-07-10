@@ -26,4 +26,4 @@ executor:
     spawn: false
     entry: main.ts
 title: Copy flies
-icon: ":carbon:copy-file:"
+icon: ":carbon:document-multiple-02:"

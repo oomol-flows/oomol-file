@@ -44,4 +44,4 @@ executor:
     entry: main.ts
     spawn: false
 title: URL to binary
-icon: ":carbon:cloud-download:"
+icon: ":carbon:cloud-data-ops:"
