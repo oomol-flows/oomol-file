@@ -3,6 +3,8 @@ inputs_def:
     description: Input
     json_schema:
       type: string
+  - group: Options
+    collapsed: true
   - handle: query
     json_schema:
       type: object

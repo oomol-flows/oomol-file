@@ -106,8 +106,8 @@ inputs_def:
         - utf_16_be
         - utf_16_le
         - utf_7
-    nullable: true
     value:
+    nullable: true
 outputs_def:
   - handle: string
     json_schema:

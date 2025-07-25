@@ -29,13 +29,8 @@
       },
       "sections": {
         "subflowInput": {
-          "collapsed": {
-            "query": {
-              "[]": true
-            },
-            "headers": {
-              "[]": true
-            }
+          "groupCollapsed": {
+            "Options": true
           }
         }
       }

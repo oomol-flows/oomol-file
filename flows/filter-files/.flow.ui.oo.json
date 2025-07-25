@@ -4,8 +4,8 @@
       "contentWidth": 450,
       "rfNode": {
         "position": {
-          "x": 318.5,
-          "y": 330.5
+          "x": 316.5,
+          "y": 249.6419750017634
         }
       }
     },
@@ -15,6 +15,13 @@
         "position": {
           "x": -223.61940344954854,
           "y": 222.6419750017634
+        }
+      },
+      "sections": {
+        "inputs": {
+          "groupCollapsed": {
+            "more": true
+          }
         }
       }
     }
