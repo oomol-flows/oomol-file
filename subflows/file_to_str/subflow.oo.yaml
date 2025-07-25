@@ -6,6 +6,8 @@ inputs_def:
       ui:widget: file
     nullable: false
   - handle: encoding
+    description: The decoding format of the string, if not filled, it will be
+      automatically recognized
     json_schema:
       enum:
         - utf_8
@@ -110,10 +112,13 @@ inputs_def:
     nullable: true
 outputs_def:
   - handle: string
+    description: Decoded string of file
     json_schema:
       type: string
     nullable: false
   - handle: encoding
+    description: String encoding format. If not specified before, this is the format
+      automatically recognized.
     json_schema:
       enum:
         - utf_8
@@ -246,3 +251,4 @@ outputs_from:
     from_node:
       - node_id: decode-string#1
         output_handle: encoding
+description: Read the file content and encode it into a string

@@ -19,7 +19,7 @@ outputs_def:
       type: string
       ui:widget: dir
 ui:
-  default_width: 450
+  default_width: 499.2611083984375
 executor:
   name: nodejs
   options:

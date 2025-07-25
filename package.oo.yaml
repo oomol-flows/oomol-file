@@ -1,4 +1,4 @@
-version: 0.0.14
+version: 0.0.15
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: pip install pandas
@@ -9,5 +9,5 @@ dependencies:
 name: oomol-file
 displayName: File
 description: Related to operation files.
-releaseNotes: add file2str & remote2str.
+releaseNotes: add groups & descriptions
 repository: https://github.com/oomol-flows/oomol-file

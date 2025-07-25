@@ -19,3 +19,4 @@ executor:
     entry: main.ts
 title: Empty folder
 icon: ":carbon:folder-off:"
+description: Delete all contents in the folder

@@ -16,6 +16,13 @@
           "x": 514,
           "y": 0
         }
+      },
+      "sections": {
+        "inputs": {
+          "groupCollapsed": {
+            "Options": true
+          }
+        }
       }
     },
     "dir_to_path_list#1": {
