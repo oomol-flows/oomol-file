@@ -4,19 +4,23 @@ inputs_def:
     json_schema:
       contentMediaType: oomol/bin
   - handle: file_name
+    description: The converted file name
     json_schema:
       type: string
   - handle: output_folder
+    description: The converted file save folder path
     json_schema:
       type: string
       ui:widget: dir
   - group: Options
     collapsed: true
   - handle: mkdir
+    description: Whether to create the folder if it does not exist
     json_schema:
       type: boolean
     value: false
   - handle: when_file_exists
+    description: What to do when a file already exists at the save path?
     json_schema:
       enum:
         - override

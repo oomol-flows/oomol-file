@@ -9,19 +9,24 @@ inputs_def:
       contentMediaType: oomol/bin
   - group: Options
     collapsed: true
-  - handle: suffix
-    json_schema:
-      type: string
-    value:
-    nullable: true
   - handle: file_path
+    description: Save the file path. If left blank, specify a specific address, the
+      suffix of which is the same as the suffix setting (if this field has a
+      value)
     json_schema:
       type: string
       ui:widget: save
     value:
     nullable: true
+  - handle: suffix
+    description: Specify the file suffix when the file_path is not set
+    json_schema:
+      type: string
+    value:
+    nullable: true
 outputs_def:
   - handle: file_path
+    description: Saved file path
     json_schema:
       type: string
       ui:widget: save

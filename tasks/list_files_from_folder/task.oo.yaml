@@ -7,21 +7,25 @@ inputs_def:
   - group: more
     collapsed: true
   - handle: sort
+    description: Sort files by filename using natural sort
     json_schema:
       type: boolean
     value: false
     nullable: false
   - handle: traverse
+    description: Recursively search subfolders
     json_schema:
       type: boolean
     value: false
   - handle: absolute_path
+    description: If enabled, the absolute path is returned. If disabled, the path
+      relative to the folder is returned.
     json_schema:
       type: boolean
     value: true
 outputs_def:
   - handle: file_paths
-    description: Output
+    description: If the folder does not exist, an empty array is returned here
     json_schema:
       type: array
       items:
@@ -32,7 +36,7 @@ outputs_def:
       type: boolean
     nullable: false
 ui:
-  default_width: 450
+  default_width: 463.1607666015625
 executor:
   name: nodejs
   options:

@@ -10,7 +10,7 @@ outputs_def:
     json_schema:
       contentMediaType: oomol/bin
 ui:
-  default_width: 450
+  default_width: 371.23046875
 executor:
   name: nodejs
   options:
@@ -18,3 +18,4 @@ executor:
     spawn: false
 title: File to binary
 icon: ":carbon:document-blank:"
+description: Read binary contents of a file
