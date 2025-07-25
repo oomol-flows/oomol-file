@@ -1,4 +1,4 @@
-title: filter-files
+title: Filter files
 nodes:
   - node_id: filter_files#1
     task: self::filter_files

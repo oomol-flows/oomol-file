@@ -17,6 +17,9 @@
             "headers": {
               "[]": true
             }
+          },
+          "groupCollapsed": {
+            "Options": true
           }
         }
       }
@@ -43,7 +46,7 @@
       "rfNode": {
         "position": {
           "x": 0,
-          "y": 611.3278919582128
+          "y": 531.6024661764302
         }
       },
       "sections": {
@@ -55,6 +58,9 @@
             "headers": {
               "[]": true
             }
+          },
+          "groupCollapsed": {
+            "Options": true
           }
         }
       }

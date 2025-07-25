@@ -71,3 +71,4 @@ nodes:
         value: /app/workspace/demo/read/Demo.md
     title: File
     node_id: +value#1
+title: Copy file

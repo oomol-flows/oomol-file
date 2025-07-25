@@ -25,6 +25,13 @@
           "x": 0,
           "y": 335.5
         }
+      },
+      "sections": {
+        "inputs": {
+          "groupCollapsed": {
+            "more": true
+          }
+        }
       }
     },
     "copy_flie_list#2": {

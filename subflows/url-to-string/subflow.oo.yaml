@@ -1,9 +1,11 @@
 inputs_def:
   - handle: url
+    description: Input
     json_schema:
       type: string
     nullable: false
-    description: Input
+  - group: Options
+    collapsed: true
   - handle: encoding
     json_schema:
       enum:
@@ -105,36 +107,36 @@ inputs_def:
         - utf_16_be
         - utf_16_le
         - utf_7
-    nullable: true
     value:
+    nullable: true
   - handle: query
     json_schema:
       type: object
       additionalProperties:
         type: string
-    nullable: false
     value:
       {}
+    nullable: false
   - handle: headers
     json_schema:
       type: object
       additionalProperties:
         type: string
-    nullable: false
     value:
       {}
+    nullable: false
   - handle: timeout
     json_schema:
       type: integer
       minimum: 0
-    nullable: false
     value: 0
+    nullable: false
   - handle: retry_times
     json_schema:
       type: integer
       minimum: 1
-    nullable: false
     value: 1
+    nullable: false
 outputs_def:
   - handle: string
     json_schema:

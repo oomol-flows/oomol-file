@@ -4,11 +4,13 @@ inputs_def:
     json_schema:
       type: string
       ui:widget: dir
+  - group: more
+    collapsed: true
   - handle: sort
     json_schema:
       type: boolean
-    nullable: false
     value: false
+    nullable: false
   - handle: traverse
     json_schema:
       type: boolean
