@@ -26,6 +26,9 @@
             "headers": {
               "[]": true
             }
+          },
+          "groupCollapsed": {
+            "Options": true
           }
         }
       }

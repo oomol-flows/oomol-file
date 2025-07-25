@@ -10,6 +10,8 @@ inputs_def:
     json_schema:
       type: string
       ui:widget: dir
+  - group: Options
+    collapsed: true
   - handle: mkdir
     json_schema:
       type: boolean
