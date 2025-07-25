@@ -5,7 +5,7 @@ scripts:
   bootstrap: pnpm install
 icon: "./icon.png"
 dependencies:
-  oomol-transform: 0.0.5
+  oomol-transform: 0.0.6
 name: oomol-file
 displayName: File
 description: Related to operation files.

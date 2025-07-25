@@ -28,3 +28,4 @@ nodes:
       - handle: retry_times
         value: 1
     task: self::url_to_binary
+title: To binary
