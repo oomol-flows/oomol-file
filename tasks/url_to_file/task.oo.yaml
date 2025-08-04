@@ -3,6 +3,12 @@ inputs_def:
     description: Input
     json_schema:
       type: string
+  - handle: file_dir
+    json_schema:
+      type: string
+      ui:widget: dir
+    value:
+    nullable: true
   - group: Options
     collapsed: true
   - handle: query

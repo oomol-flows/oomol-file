@@ -4,7 +4,6 @@ nodes:
     node_id: read-file#1
     inputs_from:
       - handle: file_path
-        value: /app/workspace/demo/read/Demo.md
     description: Read origin file as binary
   - task: self::binary_to_file
     title: "Binary to file"
@@ -15,9 +14,7 @@ nodes:
           - node_id: read-file#1
             output_handle: binary
       - handle: file_name
-        value: copy-target.md
       - handle: output_folder
-        value: /app/workspace/demo/write
       - handle: mkdir
         value: true
       - handle: when_file_exists
@@ -28,7 +25,6 @@ nodes:
     node_id: dir_to_path_list#1
     inputs_from:
       - handle: folder
-        value: /app/workspace/demo/read
       - handle: sort
         value: false
       - handle: traverse
@@ -55,14 +51,6 @@ nodes:
             output_handle: file_path
       - handle: destination_folder
         value:
-  - task: self::copy_folder
-    title: "Copy folder #1"
-    node_id: copy_dir#1
-    inputs_from:
-      - handle: source_folder
-        value: /app/workspace/demo/read
-      - handle: destination_folder
-        value:
   - values:
       - handle: file_path
         json_schema:
@@ -71,4 +59,11 @@ nodes:
         value: /app/workspace/demo/read/Demo.md
     title: File
     node_id: +value#1
+  - node_id: copy_file#2
+    title: "Copy file #2"
+    inputs_from:
+      - handle: source_file
+      - handle: destination_folder
+        value: null
+    task: self::copy_file
 title: Copy file

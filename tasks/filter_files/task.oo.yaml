@@ -18,8 +18,12 @@ inputs_def:
           - Video
           - Audio
           - PDF
-    value: image
-    nullable: false
+    value:
+    nullable: true
+  - handle: filt_hide
+    json_schema:
+      type: boolean
+    value: true
 outputs_def:
   - handle: files
     description: Output

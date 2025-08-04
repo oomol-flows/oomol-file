@@ -59,20 +59,21 @@
         }
       }
     },
-    "copy_dir#1": {
-      "rfNode": {
-        "position": {
-          "x": 50.55275239025406,
-          "y": 959
-        }
-      }
-    },
     "+value#1": {
       "contentWidth": 415,
       "rfNode": {
         "position": {
           "x": 0,
           "y": 698
+        }
+      }
+    },
+    "copy_file#2": {
+      "contentWidth": 490.7877197265625,
+      "rfNode": {
+        "position": {
+          "x": 15,
+          "y": 998.6234458775309
         }
       }
     }

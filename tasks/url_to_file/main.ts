@@ -7,6 +7,7 @@ import download from "~/shared/downloader";
 //#region generated meta
 type Inputs = {
   url: string;
+  file_dir: string | null;
   query: Record<string, any>;
   headers: Record<string, any>;
   timeout: number;
@@ -20,7 +21,7 @@ type Outputs = {
 
 export default async function (params: Inputs, context: Context<Inputs, Outputs>): Promise<Outputs> {
   const rawFilename = path.basename(params.url);
-  const folderPath = path.join(context.sessionDir, "downloading");
+  const folderPath = params.file_dir || path.join(context.sessionDir, "downloading");
   const binary = await download({
     ...params,
     reportProgress: p => context.reportProgress(p),

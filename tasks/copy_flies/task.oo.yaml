@@ -10,14 +10,15 @@ inputs_def:
     json_schema:
       type: string
       ui:widget: dir
-    value:
     nullable: true
 outputs_def:
-  - handle: destination_folder
+  - handle: destination_files
     description: Output
     json_schema:
-      type: string
-      ui:widget: dir
+      type: array
+      items:
+        type: string
+        ui:widget: file
 ui:
   default_width: 499.2611083984375
 executor:
