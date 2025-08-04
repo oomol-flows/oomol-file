@@ -4,7 +4,6 @@ nodes:
     node_id: read-url#1
     inputs_from:
       - handle: url
-        value: https://oomol.com/
       - handle: query
         value:
           {}
@@ -25,9 +24,7 @@ nodes:
           - node_id: read-url#1
             output_handle: binary
       - handle: file_name
-        value: oomol-home-page.html
       - handle: output_folder
-        value: /app/workspace/demo/write
       - handle: mkdir
         value: true
       - handle: when_file_exists
@@ -51,7 +48,6 @@ nodes:
     node_id: url_to_path#1
     inputs_from:
       - handle: url
-        value: https://oomol.com/
       - handle: query
         value:
           {}
@@ -64,4 +60,30 @@ nodes:
         value: 1
       - handle: reset_filename
         value: true
+      - handle: file_dir
+        value:
+  - node_id: copy_file#1
+    title: "Copy file #1"
+    inputs_from:
+      - handle: source_file
+      - handle: destination_folder
+        value: null
+    task: self::copy_file
+  - node_id: url-to-string#1
+    title: "URL to string #1"
+    inputs_from:
+      - handle: url
+      - handle: encoding
+        value: null
+      - handle: query
+        value:
+          {}
+      - handle: headers
+        value:
+          {}
+      - handle: timeout
+        value: 0
+      - handle: retry_times
+        value: 1
+    subflow: self::url-to-string
 title: Download file

@@ -4,7 +4,6 @@ nodes:
     node_id: read-file#1
     inputs_from:
       - handle: file_path
-        value: /app/workspace/demo/read/Demo.md
     description: |-
       Read file from local file path.
       Then you can see the downloaded binary data in log panel.
@@ -16,7 +15,6 @@ nodes:
       Then you can see the downloaded binary data in log panel.
     inputs_from:
       - handle: url
-        value: https://oomol.com/
       - handle: query
         value:
           {}

@@ -7,7 +7,6 @@ nodes:
       Then you can see the name list in log panel.
     inputs_from:
       - handle: folder
-        value: /app/workspace/demo/read
       - handle: absolute_path
         value: true
       - handle: sort

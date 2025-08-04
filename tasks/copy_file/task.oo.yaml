@@ -11,11 +11,11 @@ inputs_def:
     value:
     nullable: true
 outputs_def:
-  - handle: destination_folder
+  - handle: destination_file
     description: Output
     json_schema:
       type: string
-      ui:widget: dir
+      ui:widget: file
 ui:
   default_width: 490.7877197265625
 executor:

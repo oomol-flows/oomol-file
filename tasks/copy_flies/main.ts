@@ -7,7 +7,7 @@ type Inputs = {
   destination_folder: string | null;
 };
 type Outputs = {
-  destination_folder: string;
+  destination_files: string[];
 };
 
 export default async function (
@@ -19,20 +19,23 @@ export default async function (
   if (destination_folder === null) {
     destination_folder = context.sessionDir;
   }
-  await copyFilesToDir(source_files, destination_folder); 
-  return { destination_folder: destination_folder };
+  const destinationFiles = await copyFilesToDir(source_files, destination_folder); 
+  return { destination_files: destinationFiles };
 }
 
 async function copyFilesToDir(sourceFiles: string[], destinationDir: string) {
   try {
     await fs.ensureDir(destinationDir);
+    const destinationFiles: string[] = [];
 
     for (const sourceFile of sourceFiles) {
       const fileName = path.basename(sourceFile);
       const destinationFile = path.join(destinationDir, fileName);
       await fs.copy(sourceFile, destinationFile);
+      destinationFiles.push(destinationFile);
       console.log(`File ${fileName} copied successfully!`);
     }
+    return destinationFiles;
   } catch (err) {
     console.error("Error copying files:", err);
     throw err;
