@@ -1,6 +1,6 @@
 inputs_def:
   - handle: source_file
-    description: Input
+    description: ""
     json_schema:
       type: string
       ui:widget: file
@@ -12,7 +12,7 @@ inputs_def:
     nullable: true
 outputs_def:
   - handle: destination_file
-    description: Output
+    description: ""
     json_schema:
       type: string
       ui:widget: file

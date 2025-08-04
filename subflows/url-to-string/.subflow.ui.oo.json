@@ -26,13 +26,6 @@
           "x": 0,
           "y": -100
         }
-      },
-      "sections": {
-        "subflowInput": {
-          "groupCollapsed": {
-            "Options": true
-          }
-        }
       }
     },
     "output": {

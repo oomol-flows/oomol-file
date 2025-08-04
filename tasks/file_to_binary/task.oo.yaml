@@ -1,12 +1,12 @@
 inputs_def:
   - handle: file_path
-    description: Input
+    description: Read binary contents of a file
     json_schema:
       type: string
       ui:widget: file
 outputs_def:
   - handle: binary
-    description: Output
+    description: ""
     json_schema:
       contentMediaType: oomol/bin
 ui:

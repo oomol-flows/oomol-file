@@ -1,12 +1,12 @@
 inputs_def:
   - handle: folder
-    description: Input
+    description: ""
     json_schema:
       type: string
       ui:widget: dir
 outputs_def:
   - handle: folder
-    description: Output
+    description: ""
     json_schema:
       type: string
       ui:widget: dir

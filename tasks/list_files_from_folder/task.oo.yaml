@@ -1,6 +1,6 @@
 inputs_def:
   - handle: folder
-    description: Input
+    description: ""
     json_schema:
       type: string
       ui:widget: dir

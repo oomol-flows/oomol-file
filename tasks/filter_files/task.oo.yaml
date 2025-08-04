@@ -2,7 +2,7 @@ ui:
   default_width: 450
 inputs_def:
   - handle: files
-    description: Input
+    description: ""
     json_schema:
       type: array
   - handle: type
@@ -26,7 +26,7 @@ inputs_def:
     value: true
 outputs_def:
   - handle: files
-    description: Output
+    description: ""
     json_schema:
       type: array
 executor:

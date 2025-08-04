@@ -30,5 +30,8 @@ outputs_def:
     json_schema:
       type: string
       ui:widget: save
+      ui:options:
+        excludeAll: false
 title: Binary save as file
 icon: ":carbon:transform-binary:"
+description: Write binary content to a file

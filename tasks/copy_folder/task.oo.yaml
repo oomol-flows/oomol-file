@@ -1,6 +1,6 @@
 inputs_def:
   - handle: source_folder
-    description: Input
+    description: ""
     json_schema:
       type: string
       ui:widget: dir
@@ -12,7 +12,7 @@ inputs_def:
     nullable: true
 outputs_def:
   - handle: destination_folder
-    description: Output
+    description: ""
     json_schema:
       type: string
       ui:widget: dir

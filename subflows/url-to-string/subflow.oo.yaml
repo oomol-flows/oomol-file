@@ -5,8 +5,10 @@ inputs_def:
       type: string
     nullable: false
   - group: Options
-    collapsed: true
+    collapsed: false
   - handle: encoding
+    description: The encoding format to use to parse the request content. If left
+      unfilled, the format will be automatically determined.
     json_schema:
       enum:
         - utf_8
@@ -139,10 +141,14 @@ inputs_def:
     nullable: false
 outputs_def:
   - handle: string
+    description: The string content of the URL. For example, if the URL corresponds
+      to an HTML file, this is the HTHML content.
     json_schema:
       type: string
     nullable: false
   - handle: encoding
+    description: The encoding of the URL string. If encoding is not set, the
+      encoding here is automatically identified.
     json_schema:
       enum:
         - utf_8
@@ -293,3 +299,7 @@ outputs_from:
     from_node:
       - node_id: decode-string#1
         output_handle: encoding
+description: Initiate a request to download the content of a URL and parse it
+  into a string. It can be used to read the content of a URL such as HTML, XML,
+  etc. If the URL corresponding to the content is not a string (such as an image
+  or audio file), an error will be reported.
