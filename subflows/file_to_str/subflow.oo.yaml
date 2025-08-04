@@ -1,6 +1,6 @@
 inputs_def:
   - handle: file_path
-    description: Input
+    description: ""
     json_schema:
       type: string
       ui:widget: file

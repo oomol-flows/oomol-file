@@ -13,7 +13,7 @@ inputs_def:
       type: string
       ui:widget: dir
   - group: Options
-    collapsed: true
+    collapsed: false
   - handle: mkdir
     description: Whether to create the folder if it does not exist
     json_schema:
@@ -48,3 +48,4 @@ executor:
     spawn: false
 title: Binary to file
 icon: ":carbon:transform-binary:"
+description: Write binary content to a file
