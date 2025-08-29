@@ -303,3 +303,4 @@ description: Initiate a request to download the content of a URL and parse it
   into a string. It can be used to read the content of a URL such as HTML, XML,
   etc. If the URL corresponding to the content is not a string (such as an image
   or audio file), an error will be reported.
+private: false

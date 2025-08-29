@@ -65,3 +65,4 @@ title: "URL to file "
 icon: ":carbon:cloud-download:"
 description: Initiate an HTTP request to download the content of the URL and
   save it to a file.
+private: false
