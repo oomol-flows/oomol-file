@@ -1,13 +1,11 @@
-version: 0.0.18
+version: 0.0.19
 scripts:
-  # Script executed when the container is first loaded
-  # eg: bootstrap: pip install pandas
   bootstrap: pnpm install
-icon: "./icon.png"
+icon: ./icon.png
 dependencies:
   oomol-transform: 0.0.6
 name: oomol-file
 displayName: File
 description: Related to operation files.
-releaseNotes: update layer
+releaseNotes: update icon
 repository: https://github.com/oomol-flows/oomol-file
