@@ -6,8 +6,7 @@ inputs_def:
       ui:widget: file
     nullable: false
   - handle: encoding
-    description: The decoding format of the string, if not filled, it will be
-      automatically recognized
+    description: "%the-decoding-format-of-the-string-if-not-filled-it-will-be-autom%"
     json_schema:
       enum:
         - utf_8
@@ -222,14 +221,14 @@ outputs_def:
     nullable: false
 nodes:
   - node_id: file_to_binary#1
-    title: "File to binary #1"
+    title: "%file-to-binary-1%"
     inputs_from:
       - handle: file_path
         from_flow:
           - input_handle: file_path
     task: self::file_to_binary
   - node_id: decode-string#1
-    title: "Decode string #1"
+    title: "%decode-string-1%"
     inputs_from:
       - handle: binary
         from_node:
@@ -240,7 +239,7 @@ nodes:
         from_flow:
           - input_handle: encoding
     task: oomol-transform::decode-string
-title: File to string
+title: "%file-to-string%"
 icon: ":carbon:document:"
 outputs_from:
   - handle: string
@@ -251,4 +250,4 @@ outputs_from:
     from_node:
       - node_id: decode-string#1
         output_handle: encoding
-description: Read the file content and encode it into a string
+description: "%read-the-file-content-and-encode-it-into-a-string%"

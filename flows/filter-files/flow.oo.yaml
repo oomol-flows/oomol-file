@@ -1,4 +1,4 @@
-title: Filter files
+title: "%filter-files%"
 nodes:
   - node_id: filter_files#1
     task: self::filter_files
@@ -12,7 +12,7 @@ nodes:
       - handle: filt_hide
         value: true
   - node_id: list_files_from_folder#1
-    title: "List files from folder #1"
+    title: "%list-files-from-folder-1%"
     inputs_from:
       - handle: folder
       - handle: sort

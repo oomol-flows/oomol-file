@@ -10,16 +10,14 @@ inputs_def:
   - group: Options
     collapsed: true
   - handle: file_path
-    description: Save the file path. If left blank, specify a specific address, the
-      suffix of which is the same as the suffix setting (if this field has a
-      value)
+    description: "%save-the-file-path-if-left-blank-specify-a-specific-address-the%"
     json_schema:
       type: string
       ui:widget: save
     value:
     nullable: true
   - handle: suffix
-    description: Specify the file suffix when the file_path is not set
+    description: "%specify-the-file-suffix-when-the-file_path-is-not-set%"
     json_schema:
       type: string
     value:
@@ -32,6 +30,6 @@ outputs_def:
       ui:widget: save
       ui:options:
         excludeAll: false
-title: Binary save as file
+title: "%binary-save-as-file2%"
 icon: ":carbon:transform-binary:"
-description: Write binary content to a file
+description: "%write-binary-content-to-a-file%"

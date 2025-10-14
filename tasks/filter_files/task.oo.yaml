@@ -34,5 +34,5 @@ executor:
   options:
     entry: __init__.py
     spawn: false
-title: Filter Files
+title: "%filter-files2%"
 icon: ":carbon:filter:"

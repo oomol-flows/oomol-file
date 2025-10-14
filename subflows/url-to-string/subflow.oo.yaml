@@ -1,14 +1,13 @@
 inputs_def:
   - handle: url
-    description: Input
+    description: "%input2%"
     json_schema:
       type: string
     nullable: false
   - group: Options
     collapsed: false
   - handle: encoding
-    description: The encoding format to use to parse the request content. If left
-      unfilled, the format will be automatically determined.
+    description: "%the-encoding-format-to-use-to-parse-the-request-content-if-left%"
     json_schema:
       enum:
         - utf_8
@@ -252,7 +251,7 @@ outputs_def:
     nullable: false
 nodes:
   - node_id: url_to_binary#1
-    title: "URL to binary #1"
+    title: "%url-to-binary-1%"
     inputs_from:
       - handle: url
         from_flow:
@@ -277,7 +276,7 @@ nodes:
           - input_handle: retry_times
     task: self::url_to_binary
   - node_id: decode-string#1
-    title: "Decode string #1"
+    title: "%decode-string-12%"
     inputs_from:
       - handle: binary
         from_node:
@@ -288,7 +287,7 @@ nodes:
         from_flow:
           - input_handle: encoding
     task: oomol-transform::decode-string
-title: URL to string
+title: "%url-to-string%"
 icon: ":carbon:cloud-data-ops:"
 outputs_from:
   - handle: string
@@ -299,8 +298,5 @@ outputs_from:
     from_node:
       - node_id: decode-string#1
         output_handle: encoding
-description: Initiate a request to download the content of a URL and parse it
-  into a string. It can be used to read the content of a URL such as HTML, XML,
-  etc. If the URL corresponding to the content is not a string (such as an image
-  or audio file), an error will be reported.
+description: "%initiate-a-request-to-download-the-content-of-a-url-and-parse-it%"
 private: false

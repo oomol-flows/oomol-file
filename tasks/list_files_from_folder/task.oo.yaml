@@ -7,19 +7,18 @@ inputs_def:
   - group: more
     collapsed: true
   - handle: sort
-    description: Sort files by filename using natural sort
+    description: "%sort-files-by-filename-using-natural-sort%"
     json_schema:
       type: boolean
     value: false
     nullable: false
   - handle: traverse
-    description: Recursively search subfolders
+    description: "%recursively-search-subfolders%"
     json_schema:
       type: boolean
     value: false
   - handle: absolute_path
-    description: If enabled, the absolute path is returned. If disabled, the path
-      relative to the folder is returned.
+    description: "%if-enabled-the-absolute-path-is-returned-if-disabled-the-path-re%"
     json_schema:
       type: boolean
     value: true
@@ -42,5 +41,5 @@ executor:
   options:
     entry: main.ts
     spawn: false
-title: List files from folder
+title: "%list-files-from-folder3%"
 icon: ":carbon:folder-details:"

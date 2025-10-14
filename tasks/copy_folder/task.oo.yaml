@@ -23,5 +23,5 @@ executor:
   options:
     spawn: false
     entry: main.ts
-title: Copy folder
+title: "%copy-folder%"
 icon: ":carbon:folders:"

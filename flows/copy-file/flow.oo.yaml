@@ -1,12 +1,12 @@
 nodes:
   - task: self::file_to_binary
-    title: "File to binary"
+    title: "%file-to-binary%"
     node_id: read-file#1
     inputs_from:
       - handle: file_path
-    description: Read origin file as binary
+    description: "%read-origin-file-as-binary%"
   - task: self::binary_to_file
-    title: "Binary to file"
+    title: "%binary-to-file%"
     node_id: write-file#1
     inputs_from:
       - handle: binary
@@ -19,9 +19,9 @@ nodes:
         value: true
       - handle: when_file_exists
         value: rename
-    description: Save the binary data as target file
+    description: "%save-the-binary-data-as-target-file%"
   - task: self::list_files_from_folder
-    title: "List files from folder"
+    title: "%list-files-from-folder%"
     node_id: dir_to_path_list#1
     inputs_from:
       - handle: folder
@@ -32,7 +32,7 @@ nodes:
       - handle: absolute_path
         value: true
   - task: self::copy_flies
-    title: "Copy files"
+    title: "%copy-files%"
     node_id: copy_flie_list#2
     inputs_from:
       - handle: source_files
@@ -42,7 +42,7 @@ nodes:
       - handle: destination_folder
         value:
   - task: self::copy_file
-    title: "Copy file #1"
+    title: "%copy-file-1%"
     node_id: copy_file#1
     inputs_from:
       - handle: source_file
@@ -57,13 +57,13 @@ nodes:
           type: string
           ui:widget: file
         value: /app/workspace/demo/read/Demo.md
-    title: File
+    title: "%file%"
     node_id: +value#1
   - node_id: copy_file#2
-    title: "Copy file #2"
+    title: "%copy-file-2%"
     inputs_from:
       - handle: source_file
       - handle: destination_folder
         value: null
     task: self::copy_file
-title: Copy file
+title: "%copy-file%"

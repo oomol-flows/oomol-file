@@ -26,5 +26,5 @@ executor:
   options:
     spawn: false
     entry: main.ts
-title: Copy flies
+title: "%copy-flies%"
 icon: ":carbon:document-multiple-02:"
