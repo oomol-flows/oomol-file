@@ -1,6 +1,6 @@
 nodes:
   - task: self::url_to_binary
-    title: "URL to binary"
+    title: "%url-to-binary%"
     node_id: read-url#1
     inputs_from:
       - handle: url
@@ -14,9 +14,9 @@ nodes:
         value: 0
       - handle: retry_times
         value: 1
-    description: Download HTML file from URL as binary
+    description: "%download-html-file-from-url-as-binary%"
   - task: self::binary_to_file
-    title: "Binary to file"
+    title: "%binary-to-file2%"
     node_id: write-file#1
     inputs_from:
       - handle: binary
@@ -29,9 +29,9 @@ nodes:
         value: true
       - handle: when_file_exists
         value: rename
-    description: Save the binary data as target file
+    description: "%save-the-binary-data-as-target-file2%"
   - task: self::binary_save_as_file
-    title: "Binary save as file"
+    title: "%binary-save-as-file%"
     node_id: write-temp-file#1
     inputs_from:
       - handle: binary
@@ -42,9 +42,9 @@ nodes:
         value:
       - handle: file_path
         value:
-    description: Save the binary data as temp file
+    description: "%save-the-binary-data-as-temp-file%"
   - task: self::url_to_file
-    title: "URL to file"
+    title: "%url-to-file%"
     node_id: url_to_path#1
     inputs_from:
       - handle: url
@@ -63,14 +63,14 @@ nodes:
       - handle: file_dir
         value:
   - node_id: copy_file#1
-    title: "Copy file #1"
+    title: "%copy-file-12%"
     inputs_from:
       - handle: source_file
       - handle: destination_folder
         value: null
     task: self::copy_file
   - node_id: url-to-string#1
-    title: "URL to string #1"
+    title: "%url-to-string-1%"
     inputs_from:
       - handle: url
       - handle: encoding
@@ -86,4 +86,4 @@ nodes:
       - handle: retry_times
         value: 1
     subflow: self::url-to-string
-title: Download file
+title: "%download-file%"

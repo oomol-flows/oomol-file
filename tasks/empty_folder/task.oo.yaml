@@ -17,6 +17,6 @@ executor:
   options:
     spawn: false
     entry: main.ts
-title: Empty folder
+title: "%empty-folder%"
 icon: ":carbon:folder-off:"
-description: Delete all contents in the folder
+description: "%delete-all-contents-in-the-folder%"

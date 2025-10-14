@@ -4,8 +4,7 @@ inputs_def:
     json_schema:
       type: string
   - handle: file_dir
-    description: Specify the folder path where the file will be saved. If it does
-      not exist, specify a specific path.
+    description: "%specify-the-folder-path-where-the-file-will-be-saved-if-it-does%"
     json_schema:
       type: string
       ui:widget: dir
@@ -42,8 +41,7 @@ inputs_def:
     value: 1
     nullable: false
   - handle: reset_filename
-    description: Whether to rename the downloaded file name. If false, the file name
-      in the URL will be retained.
+    description: "%whether-to-rename-the-downloaded-file-name-if-false-the-file-nam%"
     json_schema:
       type: boolean
     value: true
@@ -61,8 +59,7 @@ executor:
   options:
     spawn: false
     entry: main.ts
-title: "URL to file "
+title: "%url-to-file2%"
 icon: ":carbon:cloud-download:"
-description: Initiate an HTTP request to download the content of the URL and
-  save it to a file.
+description: "%initiate-an-http-request-to-download-the-content-of-the-url-and%"
 private: false

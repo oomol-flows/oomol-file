@@ -1,11 +1,11 @@
-version: 0.0.20
+version: 0.1.0
 scripts:
   bootstrap: pnpm install
 icon: ./icon.png
 dependencies:
   oomol-transform: 0.0.7
 name: oomol-file
-displayName: File
-description: Related to operation files.
+displayName: "%display-name%"
+description: "%description%"
 repository: https://github.com/oomol-flows/oomol-file
 releaseNotes: update

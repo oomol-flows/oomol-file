@@ -1,51 +1,232 @@
-# File
+# OOMOL File Operations
 
-Related to operation files.
+A comprehensive collection of file and folder management blocks for OOMOL workflows, designed to handle common file operations without writing code.
 
-## Read file
+## What is This Package?
 
-Read the file from the file path set in the `file` field, and then return a binary data from the `binary` field.
+**OOMOL File** is a toolkit that provides essential building blocks for working with files and folders in your OOMOL workflows. Whether you need to download files from the internet, copy documents between folders, or convert data into files, these blocks make it simple and intuitive.
 
-## Read folder
+---
 
-Read the folder where the path set by the `folder` field is located, and return all its files in the `files` field in a string array.
+## Use Cases
 
-If the `only_file_name` field is checked, `files` only returns an array of file names. If it is not checked, it returns an array of full file paths.
+This package is ideal for:
 
-When the folder corresponding to `folder` does not exist, `files` will return an empty array, and the `folder_exists` field will return `false`.
+- **Content Automation**: Download images, videos, or documents from URLs and organize them automatically
+- **File Organization**: Copy, move, and organize files and folders based on your workflow needs
+- **Data Management**: Convert binary data into files or extract binary content from existing files
+- **Batch Processing**: Process multiple files at once, filter by type, and apply operations to entire folders
+- **Web Integration**: Download content from web URLs and save them as local files
 
-## Read URL
+---
 
-Download the resource file indicated by the URL from the `url` field. And return the binary data of the resource from the `binary` field.
+## Available Blocks
 
-The key value pairs set in the `query` field will be added to the end of the URL.
+### 📥 Download & Import
 
-When a request is made, the content in `headers` field will be inserted into the HTTP header.
+#### **URL to File**
+Downloads content from a web URL and saves it as a file.
 
-`timeout` indicates the timeout of the request (in seconds).
+**Use it when**: You need to download images, documents, or any file from the internet.
 
-`retry_times` indicates the number of retries.
+**Features**:
+- Customize download location
+- Set custom headers and query parameters
+- Configure timeout and retry attempts
+- Option to preserve original filename or rename
 
-## Write file
+---
 
-Saves the binary data passed to `binary` by another block to the file whose path is returned in `file_path`.
+#### **URL to Binary**
+Downloads content from a URL and outputs it as binary data (without saving to disk).
 
-The `file_name` field indicates the file name to be saved.
+**Use it when**: You need to process downloaded content in memory before saving.
 
-The `output_folder` field indicates the folder to which the file is to be saved.
+**Features**:
+- Query parameters support
+- Custom headers
+- Timeout and retry configuration
 
-When `mk_dir` is checked, if the target folder to be saved has not been created yet, it will be automatically created (all non-existent parent folders will be recursively created). Otherwise, if the folder does not exist, an error will be reported.
+---
 
-The `when_file_exists` field indicates what action should be taken when the file to be saved already exists, depending on the selected option.
+#### **File to Binary**
+Reads a file and converts its content to binary data.
 
-- `Override`: Directly overwrite the existing file.
+**Use it when**: You need to process file content in memory or pass it to another block.
 
-- `Ignore`: Do not overwrite the existing file, ignore this file save operation (this will cause the binary data passed in the `binary` field to be lost).
+---
 
-- `Rename`: Save as a new file name to avoid overwriting any file (the new file name is created by adding a numeric suffix to the name represented by the `file_name` field).
+### 💾 Save & Export
 
-- `Error`: Report an error.
+#### **Binary to File**
+Writes binary data to a file with full control over the save location.
 
-## Write file (to path)
+**Use it when**: You have binary content (from downloads or processing) that needs to be saved.
 
-Saves the binary data passed to `binary` by another block to a temporary file, the file path of which is returned in `file_path`.
+**Features**:
+- Specify exact filename and location
+- Create folders automatically if they don't exist
+- Choose behavior when file exists: override, ignore, rename, or throw error
+
+---
+
+#### **Binary Save As File**
+Quick save for binary content with minimal configuration.
+
+**Use it when**: You want a simple "Save As" dialog experience.
+
+**Features**:
+- Optional custom save path
+- Auto-generate filenames with custom suffix
+
+---
+
+### 📂 File & Folder Management
+
+#### **Copy File**
+Copies a single file from one location to another.
+
+**Use it when**: You need to duplicate a file to a different folder.
+
+---
+
+#### **Copy Files** (Batch)
+Copies multiple files at once to a destination folder.
+
+**Use it when**: You need to copy many files together in one operation.
+
+---
+
+#### **Copy Folder**
+Copies an entire folder with all its contents to a new location.
+
+**Use it when**: You need to duplicate a complete folder structure.
+
+---
+
+#### **Empty Folder**
+Deletes all contents inside a folder (but keeps the folder itself).
+
+**Use it when**: You need to clear out a folder before processing new content.
+
+⚠️ **Warning**: This permanently deletes all files and subfolders inside the specified folder.
+
+---
+
+### 🔍 File Discovery & Filtering
+
+#### **List Files from Folder**
+Retrieves all file paths from a folder.
+
+**Use it when**: You need to get a list of files to process.
+
+**Features**:
+- Natural sorting by filename
+- Recursive subfolder search option
+- Choose between absolute or relative paths
+- Returns empty array if folder doesn't exist (no error)
+
+---
+
+#### **Filter Files**
+Filters a list of files by type (images, videos, audio, PDF).
+
+**Use it when**: You have a mixed list of files and need only specific types.
+
+**Supported Types**:
+- **Images**: .jpg, .jpeg, .png, .gif, .bmp, .webp, .svg, etc.
+- **Videos**: .mp4, .avi, .mov, .mkv, .wmv, .flv, etc.
+- **Audio**: .mp3, .wav, .flac, .aac, .ogg, .wma, etc.
+- **PDF**: .pdf documents
+
+**Features**:
+- Option to filter out hidden files
+
+---
+
+## Common Workflow Examples
+
+### Example 1: Download and Organize Images
+```
+1. URL to File → Downloads image from web
+2. Copy File → Moves it to organized folder
+```
+
+### Example 2: Batch Process Documents
+```
+1. List Files from Folder → Gets all files
+2. Filter Files → Keeps only PDFs
+3. Copy Files → Copies filtered files to output folder
+```
+
+### Example 3: Web Content Collection
+```
+1. URL to Binary → Downloads content
+2. Binary to File → Saves with custom name
+3. Copy File → Organizes into category folder
+```
+
+### Example 4: Folder Cleanup and Refresh
+```
+1. Empty Folder → Clears output directory
+2. List Files from Folder → Gets new source files
+3. Copy Files → Populates output with fresh content
+```
+
+---
+
+## Installation
+
+This package is available in the OOMOL marketplace. Simply add it to your project dependencies:
+
+```yaml
+dependencies:
+  oomol-file: latest
+```
+
+Or install via the OOMOL interface by searching for **"OOMOL File Operations"**.
+
+---
+
+## Requirements
+
+- **OOMOL Platform**: Version 0.1.0 or higher
+- **Node.js Runtime**: Required for block execution (automatically managed by OOMOL)
+
+---
+
+## Support & Contributions
+
+- **Repository**: [https://github.com/oomol-flows/oomol-file](https://github.com/oomol-flows/oomol-file)
+- **Issues**: Report bugs or request features via GitHub Issues
+- **Documentation**: Visit [OOMOL Documentation](https://oomol.com/docs) for workflow guides
+
+---
+
+## License
+
+This package is open source and available for use in both personal and commercial OOMOL projects.
+
+---
+
+## Tips for Best Results
+
+1. **Use Filter Files** after List Files to process only the file types you need
+2. **Enable retry options** in download blocks for reliable web downloads
+3. **Choose "rename"** option in Binary to File when you don't want to overwrite existing files
+4. **Enable recursive search** in List Files to process nested folder structures
+5. **Always test with Empty Folder** before processing to ensure clean output directories
+
+---
+
+## What's New
+
+**Version 0.1.0**
+- Initial release with 11 essential file operation blocks
+- Support for file downloads with retry mechanism
+- Flexible file filtering by media type
+- Comprehensive copy operations for files and folders
+
+---
+
+*Built for OOMOL Platform - Making file operations simple and visual*

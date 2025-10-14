@@ -1,18 +1,14 @@
 nodes:
   - task: self::file_to_binary
-    title: "File to binary"
+    title: "%file-to-binary2%"
     node_id: read-file#1
     inputs_from:
       - handle: file_path
-    description: |-
-      Read file from local file path.
-      Then you can see the downloaded binary data in log panel.
+    description: "%read-file-from-local-file-path-then-you-can-see-the-downloaded-b%"
   - node_id: read-url#1
     node_type: task_node
-    title: "URL to binary #2"
-    description: |-
-      Read HTML file from URL.
-      Then you can see the downloaded binary data in log panel.
+    title: "%url-to-binary-2%"
+    description: "%read-html-file-from-url-then-you-can-see-the-downloaded-binary-d%"
     inputs_from:
       - handle: url
       - handle: query
@@ -26,4 +22,4 @@ nodes:
       - handle: retry_times
         value: 1
     task: self::url_to_binary
-title: To binary
+title: "%to-binary%"

@@ -1,7 +1,6 @@
 inputs_def:
   - handle: url
-    description: Initiate an HTTP request to download the contents of the URL and
-      return it in binary format
+    description: "%initiate-an-http-request-to-download-the-contents-of-the-url-and%"
     json_schema:
       type: string
   - group: Options
@@ -46,5 +45,5 @@ executor:
   options:
     entry: main.ts
     spawn: false
-title: URL to binary
+title: "%url-to-binary2%"
 icon: ":carbon:cloud-data-ops:"
