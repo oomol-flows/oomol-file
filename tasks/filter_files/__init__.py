@@ -8,7 +8,7 @@ class Inputs(typing.TypedDict):
     type: typing.Literal["image", "video", "audio", "pdf"] | None
     filt_hide: bool
 class Outputs(typing.TypedDict):
-    files: list[typing.Any]
+    files: typing.NotRequired[list[typing.Any]]
 #endregion
 
 def main(params: Inputs, context: Context) -> Outputs:
