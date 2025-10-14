@@ -1,6 +1,6 @@
 {
   "display-name": "File",
-  "description": "Related to operation files.",
+  "description": "OOMOL File is a toolkit that provides basic modules for handling files and folders in your OOMOL workflow. Whether you need to download files from the internet, copy documents between folders, or convert data into files, these modules make the operations simple and intuitive.",
   "copy-file": "Copy file",
   "file-to-binary": "File to binary",
   "read-origin-file-as-binary": "Read origin file as binary",

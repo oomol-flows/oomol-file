@@ -1,6 +1,6 @@
 {
   "display-name": "文件",
-  "description": "与操作文件相关。",
+  "description": "OOMOL File 是一个工具包,为您的 OOMOL 工作流提供处理文件和文件夹的基础模块。无论您需要从互联网下载文件、在文件夹之间复制文档,还是将数据转换为文件,这些模块都能让操作变得简单直观。",
   "copy-file": "复制文件",
   "file-to-binary": "文件转二进制",
   "read-origin-file-as-binary": "以二进制方式读取源文件",
