@@ -43,7 +43,7 @@
   "whether-to-create-the-folder-if-it-does-not-exist": "是否在文件夹不存在时创建该文件夹",
   "what-to-do-when-a-file-already-exists-at-the-save-path": "当保存路径下已存在同名文件时该怎么办？",
   "copy-file2": "复制文件",
-  "copy-flies": "复制苍蝇",
+  "copy-flies": "复制文件数组",
   "copy-folder": "复制文件夹",
   "empty-folder": "空文件夹",
   "delete-all-contents-in-the-folder": "删除文件夹中的所有内容",

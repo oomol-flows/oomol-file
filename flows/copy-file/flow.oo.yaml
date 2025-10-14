@@ -31,7 +31,7 @@ nodes:
         value: false
       - handle: absolute_path
         value: true
-  - task: self::copy_flies
+  - task: self::copy_files
     title: "%copy-files%"
     node_id: copy_flie_list#2
     inputs_from:
