@@ -43,3 +43,5 @@ executor:
     spawn: false
 title: "%list-files-from-folder3%"
 icon: ":carbon:folder-details:"
+description: "Get all file paths from a folder with options for recursive search
+  and natural sorting"

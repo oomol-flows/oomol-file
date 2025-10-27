@@ -47,3 +47,4 @@ executor:
     spawn: false
 title: "%url-to-binary2%"
 icon: ":carbon:cloud-data-ops:"
+description: "Download content from a URL and output as binary data without saving to disk"

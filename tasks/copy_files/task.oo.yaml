@@ -28,3 +28,4 @@ executor:
     entry: main.ts
 title: "%copy-flies%"
 icon: ":carbon:document-multiple-02:"
+description: "Copy multiple files in batch from source locations to destination folder"

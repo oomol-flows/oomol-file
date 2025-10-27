@@ -36,3 +36,4 @@ executor:
     spawn: false
 title: "%filter-files2%"
 icon: ":carbon:filter:"
+description: "Filter files by type (image, video, audio, PDF) from a list of file paths"
