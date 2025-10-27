@@ -1,12 +1,12 @@
 inputs_def:
   - handle: folder
-    description: ""
+    description: "The folder path to empty (all contents will be deleted)"
     json_schema:
       type: string
       ui:widget: dir
 outputs_def:
   - handle: folder
-    description: ""
+    description: "The path of the emptied folder"
     json_schema:
       type: string
       ui:widget: dir

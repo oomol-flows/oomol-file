@@ -1,6 +1,6 @@
 inputs_def:
   - handle: folder
-    description: ""
+    description: "The folder path to list files from"
     json_schema:
       type: string
       ui:widget: dir
@@ -31,6 +31,7 @@ outputs_def:
         type: string
         ui:widget: file
   - handle: folder_exists
+    description: "Whether the folder exists"
     json_schema:
       type: boolean
     nullable: false

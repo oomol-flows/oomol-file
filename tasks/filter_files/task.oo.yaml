@@ -2,10 +2,11 @@ ui:
   default_width: 450
 inputs_def:
   - handle: files
-    description: ""
+    description: "Array of file paths to filter"
     json_schema:
       type: array
   - handle: type
+    description: "The file type to filter by (image, video, audio, or PDF)"
     json_schema:
       enum:
         - image
@@ -21,12 +22,13 @@ inputs_def:
     value:
     nullable: true
   - handle: filt_hide
+    description: "Whether to filter out hidden files (files starting with .)"
     json_schema:
       type: boolean
     value: true
 outputs_def:
   - handle: files
-    description: ""
+    description: "Array of filtered file paths matching the specified type"
     json_schema:
       type: array
 executor:

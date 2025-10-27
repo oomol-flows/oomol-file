@@ -1,6 +1,6 @@
 inputs_def:
   - handle: file_path
-    description: ""
+    description: "The file path to read and convert to string"
     json_schema:
       type: string
       ui:widget: file

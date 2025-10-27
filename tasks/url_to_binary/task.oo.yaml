@@ -35,7 +35,7 @@ inputs_def:
     nullable: false
 outputs_def:
   - handle: binary
-    description: ""
+    description: "The downloaded binary content from the URL"
     json_schema:
       contentMediaType: oomol/bin
 ui:
