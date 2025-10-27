@@ -1,6 +1,6 @@
 inputs_def:
   - handle: folder
-    description: "The folder path to list files from"
+    description: "%the-folder-path-to-list-files-from%"
     json_schema:
       type: string
       ui:widget: dir
@@ -44,5 +44,4 @@ executor:
     spawn: false
 title: "%list-files-from-folder3%"
 icon: ":carbon:folder-details:"
-description: "Get all file paths from a folder with options for recursive search
-  and natural sorting"
+description: "%get-all-file-paths-from-a-folder-with-options-for-recursive-sear%"

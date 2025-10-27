@@ -1,6 +1,6 @@
 inputs_def:
   - handle: url
-    description: "The URL to download the file from"
+    description: "%the-url-to-download-the-file-from%"
     json_schema:
       type: string
   - handle: file_dir

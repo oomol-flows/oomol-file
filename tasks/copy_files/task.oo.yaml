@@ -1,13 +1,13 @@
 inputs_def:
   - handle: source_files
-    description: "Array of source file paths to copy"
+    description: "%array-of-source-file-paths-to-copy%"
     json_schema:
       type: array
       items:
         type: string
         ui:widget: file
   - handle: destination_folder
-    description: "The destination folder path where all files will be copied to"
+    description: "%the-destination-folder-path-where-all-files-will-be-copied-to%"
     json_schema:
       type: string
       ui:widget: dir
@@ -29,4 +29,4 @@ executor:
     entry: main.ts
 title: "%copy-flies%"
 icon: ":carbon:document-multiple-02:"
-description: "Copy multiple files in batch from source locations to destination folder"
+description: "%copy-multiple-files-in-batch-from-source-locations-to-destinatio%"

@@ -1,11 +1,11 @@
 inputs_def:
   - handle: source_folder
-    description: "The source folder path to copy from"
+    description: "%the-source-folder-path-to-copy-from%"
     json_schema:
       type: string
       ui:widget: dir
   - handle: destination_folder
-    description: "The destination folder path where the folder will be copied to"
+    description: "%the-destination-folder-path-where-the-folder-will-be-copied-to%"
     json_schema:
       type: string
       ui:widget: dir
@@ -26,4 +26,4 @@ executor:
     entry: main.ts
 title: "%copy-folder%"
 icon: ":carbon:folders:"
-description: "Copy an entire folder with all its contents to a new destination location"
+description: "%copy-an-entire-folder-with-all-its-contents-to-a-new-destination%"
