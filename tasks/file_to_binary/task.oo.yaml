@@ -6,7 +6,7 @@ inputs_def:
       ui:widget: file
 outputs_def:
   - handle: binary
-    description: ""
+    description: "The binary content of the file"
     json_schema:
       contentMediaType: oomol/bin
 ui:

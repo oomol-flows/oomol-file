@@ -35,7 +35,7 @@ inputs_def:
     nullable: false
 outputs_def:
   - handle: binary
-    description: ""
+    description: "The downloaded binary content from the URL"
     json_schema:
       contentMediaType: oomol/bin
 ui:
@@ -47,3 +47,4 @@ executor:
     spawn: false
 title: "%url-to-binary2%"
 icon: ":carbon:cloud-data-ops:"
+description: "%download-content-from-a-url-and-output-as-binary-data-without-sa%"
