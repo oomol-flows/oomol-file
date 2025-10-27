@@ -1,10 +1,11 @@
 inputs_def:
   - handle: source_file
-    description: ""
+    description: "The source file path to copy from"
     json_schema:
       type: string
       ui:widget: file
   - handle: destination_folder
+    description: "The destination folder path where the file will be copied to"
     json_schema:
       type: string
       ui:widget: dir
@@ -12,7 +13,7 @@ inputs_def:
     nullable: true
 outputs_def:
   - handle: destination_file
-    description: ""
+    description: "The path of the copied file in the destination folder"
     json_schema:
       type: string
       ui:widget: file
@@ -25,3 +26,4 @@ executor:
     entry: main.ts
 title: "%copy-file2%"
 icon: ":carbon:document-multiple-01:"
+description: "Copy a single file from source location to destination folder"
